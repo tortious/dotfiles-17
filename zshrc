@@ -14,26 +14,6 @@
   export EDITOR=vim
 # }}}}
 
-# OS Detection {{{{
-  UNAME=`uname`
-  # Fallback info
-  CURRENT_OS='Linux'
-  DISTRO=''
-  if [[ $UNAME == 'Darwin' ]]; then
-    CURRENT_OS='OS X'
-  else
-    # Must be Linux, determine distro
-    if [[ -f /etc/redhat-release ]]; then
-      # CentOS or Redhat?
-      if grep -q "CentOS" /etc/redhat-release; then
-      DISTRO='CentOS'
-      else
-      DISTRO='RHEL'
-      fi
-    fi
-  fi
-# }}}}
-
 # Zgen {{{{
   source ~/.zgen/zgen.zsh
 
@@ -50,12 +30,12 @@
 		zgen oh-my-zsh plugins/coffee
 		zgen load zsh-users/zsh-syntax-highlighting
 		zgen load zsh-users/zsh-history-substring-search
-		if [[ $CURRENT_OS == 'OS X' ]]; then
+		if [[ "$OSTYPE" == darwin* ]]; then
 			zgen oh-my-zsh plguins/brew
 			zgen oh-my-zsh plguins/brew-cask
 			zgen oh-my-zsh plguins/gem
 			zgen oh-my-zsh plguins/osx
-		elif [[ $CURRENT_OS == 'Cygwin' ]]; then
+		elif [[ "$OSTYPE" == cygwin ]]; then
 			zgen oh-my-zsh plugins/cygwin
 		fi
 
