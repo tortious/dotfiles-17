@@ -1,3 +1,5 @@
+# vim: fdm=marker sw=2 ts=2 sts=2 tw=80
+
 # Global Fixes {{{{
   # For sudo-ing aliases
   # https://wiki.archlinux.org/index.php/Sudo#Passing_aliases
@@ -32,27 +34,38 @@
   fi
 # }}}}
 
-# Antigen {{{{
-  source ~/.antigen/antigen.zsh
-  
-  antigen use oh-my-zsh
-  antigen theme ~/dotfiles/zsh kono
+# Zgen {{{{
+  source ~/.zgen/zgen.zsh
 
-  antigen bundle git
-  antigen bundle zsh-users/zsh-syntax-highlighting
-  antigen bundle zsh-users/zsh-history-substring-search
-  antigen bundle node
-  antigen bundle npm
-  antigen bundle coffee
-  if [[ $CURRENT_OS == 'OS X' ]]; then
-    antigen bundle brew
-    antigen bundle brew-cask
-    antigen bundle gem
-    antigen bundle osx
-  elif [[ $CURRENT_OS == 'Cygwin' ]]; then
-    antigen bundle cygwin
-  fi
+	if ! zgen saved; then
+		echo "Creating a zgen save state"
 
-  antigen apply
+		zgen oh-my-zsh
+
+		# plugins
+		zgen oh-my-zsh plugins/git
+		zgen oh-my-zsh plugins/sudo
+		zgen oh-my-zsh plugins/node
+		zgen oh-my-zsh plugins/npm
+		zgen oh-my-zsh plugins/coffee
+		zgen load zsh-users/zsh-syntax-highlighting
+		zgen load zsh-users/zsh-history-substring-search
+		if [[ $CURRENT_OS == 'OS X' ]]; then
+			zgen oh-my-zsh plguins/brew
+			zgen oh-my-zsh plguins/brew-cask
+			zgen oh-my-zsh plguins/gem
+			zgen oh-my-zsh plguins/osx
+		elif [[ $CURRENT_OS == 'Cygwin' ]]; then
+			zgen oh-my-zsh plugins/cygwin
+		fi
+
+		# completions
+		zgen load zsh-users/zsh-completions src
+
+		# theme
+		zgen load ~/dotfiles/zsh kono
+
+		# save it all
+		zgen save
+	fi
 # }}}}
-
