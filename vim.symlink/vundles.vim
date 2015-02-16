@@ -6,6 +6,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
+" Todo - pull all these out to separate .vundles
 " Project
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'xolox/vim-misc'
