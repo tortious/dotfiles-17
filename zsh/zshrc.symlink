@@ -21,6 +21,7 @@
 		zgen oh-my-zsh
 
 		# plugins
+	  zgen load bkonowitz/dotfiles zsh
 	  zgen load bkonowitz/dotfiles vim
 		zgen oh-my-zsh plugins/git
 	  zgen load bkonowitz/dotfiles git
