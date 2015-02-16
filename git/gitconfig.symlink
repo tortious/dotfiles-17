@@ -1,0 +1,22 @@
+[init]
+  templatedir = ~/.git_templates
+[alias]
+  aa = add --all
+  ci = commit -v
+  co = checkout
+  st = status
+[color]
+  ui = auto
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+[fetch]
+  prune = true
+[include]
+  path = ~/.gitconfig.local
+[merge]
+  ff = only
+[pull]
+  default = current
+[push]
+  default = current
