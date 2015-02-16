@@ -62,7 +62,16 @@ install_dotfiles() {
   done
 }
 
+install_vundles() {
+  if [ ! -e "$HOME/.vim/bundle/vundle.vim" ]; then
+    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle.vim
+  fi
+
+  vim +PluginInstall +qall
+}
+
 install_dotfiles
+install_vundles
 echo ''
 echo "All done!"
 

@@ -1,6 +1,6 @@
 " ============ Vundle configuration ============
 filetype off
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/vundle.vim
 set rtp+=~/.vim/vundles/ " Submodules
 call vundle#begin()
 
