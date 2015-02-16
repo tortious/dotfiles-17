@@ -1,5 +1,5 @@
 # OSX Specific
-if [ $OSTYPE == darwin* ]; then
+if [[ "$OSTYPE" == darwin* ]]; then
   alias ls='gls'
 
   # Network Utils
