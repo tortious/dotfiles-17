@@ -30,15 +30,16 @@ endif
 
 " =============== UI ===============
 set background=dark
-colorscheme base16-solarized
-set guioptions-=T
-set guicursor=a:blinkon0
-set relativenumber
+colorscheme grb256
 let g:netrw_liststyle=3
 set cursorline
+set guicursor=a:blinkon0
+set guioptions-=T
 set hlsearch
-set ruler
 set lazyredraw
+set list listchars=tab:»·,trail:· " display that extra whitespace
+set relativenumber
+set ruler
 set scrolloff=6
 set t_ti=t_te= " prevent vim from killing scrollback buffer
 map <Leader>n :nohl<cr>
@@ -51,6 +52,10 @@ endif
 
 " =============== Indentation ===============
 set autoindent
+set expandtab
+set shiftwidth=2
+set tabstop=2
+set sts=2
 filetype plugin indent on
 
 " =============== Searching ===============
