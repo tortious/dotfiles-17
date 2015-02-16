@@ -38,6 +38,8 @@ nnoremap <C-l> <C-w>l
  nmap <silent> ,u~ :t.\|s/./\\~/g\|:nohls<cr>
 
 " Fixes
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags = 'li\|p'
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
@@ -46,3 +48,28 @@ cmap w!! w !sudo tee > /dev/null %
 " set noesckeys
 set ttimeout
 set ttimeoutlen=1
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow splitright
+
+command! W w " Bind :W to :w"
+command! Q q " Bind :Q to :q
+command! Qall qall
+cmap q1 q!
+" " Disable Ex mode
+map Q <Nop>
+
+" File editing
+function! RenameFile()
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'), 'file')
+  if new_name != '' && new_name != old_name
+    exec ':saveas ' . new_name
+    exec ':silent !rm ' . old_name
+    redraw!
+  endif
+endfunction
+map <Leader>rn :call RenameFile()<cr>
+
+map <Leader>vi :tabe ~/.vimrc<CR>
+

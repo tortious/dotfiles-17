@@ -18,7 +18,7 @@ set viminfo+=!
 set mouse=a
 set mousehide
 set tags=tags;/
-set clipboard=unnamed[plus]
+set clipboard=unnamed
 
 " =============== Vundle Initialization ===============
 " This loads all the plugins specified in ~/.vim/vundles.vim
@@ -65,8 +65,6 @@ filetype plugin indent on
 " =============== Searching ===============
 set ignorecase smartcase
 set incsearch
-
-" =============== Completion ===============
-set smarttab
+let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
 
 so ~/.vim/settings.vim
