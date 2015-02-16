@@ -1,96 +1,99 @@
-" vim: fdm=marker sw=2 ts=2 sts=2 tw=80
 set nocompatible
 
-" General sets {{{{
-  let g:netrw_liststyle=3
-  let mapleader=","
-  set autoindent
-  set autoread
-  set backspace=indent,eol,start
-  set guioptions-=T
-  set ignorecase smartcase
-  set incsearch
-  set laststatus=2
-  set mouse=a
-  set mousehide
-  set noerrorbells
-  set relativenumber
-  set smarttab
-  set tags=tags;/
-  set viminfo+=!
-" }}}}
+" Leader overrides and other must do's can happen here
+if filereadable(expand("~/.vimrc.before"))
+	source ~/.vimrc.before
+endif
 
-" Buffers {{{{
-  set lazyredraw
-	set scrolloff=6
-	set t_ti=t_te= " prevent vim from killing scrollback buffer
-" }}}}
+" =============== General ===============
+let mapleader=","
+set autoread
+set backspace=indent,eol,start
+set noerrorbells
+set showcmd
+set showmatch
+set showmode
+set visualbell
+set viminfo+=!
+set mouse=a
+set mousehide
+set tags=tags;/
 
-" History and backup files {{{{
-  set history=500
-	
-	" " taken from
-	" http://stackoverflow.com/questions/4331776/change-vim-swap-backup-undo-file-name
-	" " Save your backups to a less annoying place than the current directory.
-	" " If you have .vim-backup in the current directory, it'll use that.
-	" " Otherwise it saves it to ~/.vim/backup or . if all else fails.
-	if isdirectory($HOME . '/.vim/backup') == 0
-		:silent !mkdir -p ~/.vim/backup >/dev/null 2>&1
-	endif
-	set backupdir-=.
-	set backupdir+=.
-	set backupdir-=~/
-	set backupdir^=~/.vim/backup/
-	set backupdir^=./.vim-backup/
-	set backup
+" =============== History and Swap ===============
+set history=500
+set laststatus=2
+if isdirectory($HOME . '/.vim/backup') == 0
+  :silent !mkdir -p ~/.vim/backup >/dev/null 2>&1
+endif
+set backupdir-=.
+set backupdir+=.
+set backupdir-=~/
+set backupdir^=~/.vim/backup/
+set backupdir^=./.vim-backup/
+set backup
 
-	" Save your swp files to a less annoying place than the current directory.
-	" " If you have .vim-swap in the current directory, it'll use that.
-	" " Otherwise it saves it to ~/.vim/swap, ~/tmp or .
-	if isdirectory($HOME . '/.vim/swap') == 0
-		:silent !mkdir -p ~/.vim/swap >/dev/null 2>&1
-	endif
-	set directory=./.vim-swap//
-	set directory+=~/.vim/swap//
-	set directory+=~/tmp//
-	set directory+=.
+" Save your swp files to a less annoying place than the current directory.
+" " If you have .vim-swap in the current directory, it'll use that.
+" " Otherwise it saves it to ~/.vim/swap, ~/tmp or .
+if isdirectory($HOME . '/.vim/swap') == 0
+  :silent !mkdir -p ~/.vim/swap >/dev/null 2>&1
+endif
+set directory=./.vim-swap//
+set directory+=~/.vim/swap//
+set directory+=~/tmp//
+set directory+=.
 
-	" viminfo stores the the state of your previous editing session
-	set viminfo+=n~/.vim/viminfo
-	if exists("+undofile")
-		" undofile - This allows you to use undos after exiting and restarting
-		" This, like swap and backups, uses .vim-undo first, then ~/.vim/undo
-		" :help undo-persistence
-		" This is only present in 7.3+
-			if isdirectory($HOME . '/.vim/undo') == 0
-				:silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
-			endif
-		set undodir=./.vim-undo//
-		set undodir+=~/.vim/undo//
-		set undofile
-	endif
-" }}}}
+" viminfo stores the the state of your previous editing session
+set viminfo+=n~/.vim/viminfo
+if exists("+undofile")
+  " undofile - This allows you to use undos after exiting and restarting
+  " This, like swap and backups, uses .vim-undo first, then ~/.vim/undo
+  " :help undo-persistence
+  " This is only present in 7.3+
+  if isdirectory($HOME . '/.vim/undo') == 0
+    :silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
+  endif
+  set undodir=./.vim-undo//
+  set undodir+=~/.vim/undo//
+  set undofile
+endif
 
-" Highlighting {{{{
-  set cursorline
-  set hlsearch
-  set ruler
-  set showmatch
-  set visualbell
-	map <Leader>n :nohl<cr>
-	
-	" Switch syntax highlighting on, when the terminal has colors
-	" Also switch on highlighting the last used search pattern.
-	if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
-		syntax on
-	endif
+" =============== UI ===============
+set guioptions-=T
+set guicursor=a:blinkon0
+set relativenumber
+let g:netrw_liststyle=3
+set cursorline
+set hlsearch
+set ruler
+set lazyredraw
+set scrolloff=6
+set t_ti=t_te= " prevent vim from killing scrollback buffer
+map <Leader>n :nohl<cr>
 
-	filetype plugin indent on
-" }}}}
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
+	syntax on
+endif
+
+" =============== Indentation ===============
+set autoindent
+filetype plugin indent on
+
+" =============== Searching ===============
+set ignorecase smartcase
+set incsearch
+
+" =============== Completion ===============
+set smarttab
+
+" =============== Vundle Initialization ===============
+" This loads all the plugins specified in ~/.vim/vundles.vim
+" Use Vundle plugin to manage all other plugins
+if filereadable(expand("~/.vim/vundles.vim"))
+ source ~/.vim/vundles.vim
+endif
 
 
-" Bundles {{{{
-	if filereadable(expand("~/.vimrc.bundles"))
-		source ~/.vimrc.bundles
-	endif
-" }}}}
+so ~/.vim/settings.vim
