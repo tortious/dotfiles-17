@@ -42,7 +42,7 @@
 		zgen load zsh-users/zsh-completions src
 
 		# theme
-		zgen load ~/dotfiles zsh/kono
+		zgen load bkonowitz/dotfiles zsh/kono
 
 		# save it all
 		zgen save
