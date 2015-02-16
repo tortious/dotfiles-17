@@ -1,38 +1,29 @@
 " vim: fdm=marker sw=2 ts=2 sts=2 tw=80
 set nocompatible
 
-" Modeline and Notes {{{{
-  
-" }}}}
-
-" Envrionment {{{{
-
-" }}}}
-
 " General sets {{{{
+  let g:netrw_liststyle=3
   let mapleader=","
-  set relativenumber
-  set mouse=a
-  set mousehide
-  set ruler
-  set lazyredraw
-  set incsearch
-  set hlsearch
-  set laststatus=2
   set autoindent
-  set ignorecase smartcase
-  set smarttab
-  set viminfo+=!
-  set guioptions-=T
-  set showmatch
-  set visualbell
-  set noerrorbells
-  set cursorline
-  set tags=tags;/
   set autoread
   set backspace=indent,eol,start
-  let g:netrw_liststyle=3
-  set t_ti=t_te= " prevent vim from killing scrollback buffer
+  set guioptions-=T
+  set ignorecase smartcase
+  set incsearch
+  set laststatus=2
+  set mouse=a
+  set mousehide
+  set noerrorbells
+  set relativenumber
+  set smarttab
+  set tags=tags;/
+  set viminfo+=!
+" }}}}
+
+" Buffers {{{{
+  set lazyredraw
+	set scrolloff=6
+	set t_ti=t_te= " prevent vim from killing scrollback buffer
 " }}}}
 
 " History and backup files {{{{
@@ -77,5 +68,29 @@ set nocompatible
 		set undodir=./.vim-undo//
 		set undodir+=~/.vim/undo//
 		set undofile
+	endif
+" }}}}
+
+" Highlighting {{{{
+  set cursorline
+  set hlsearch
+  set ruler
+  set showmatch
+  set visualbell
+	map <Leader>n :nohl<cr>
+	
+	" Switch syntax highlighting on, when the terminal has colors
+	" Also switch on highlighting the last used search pattern.
+	if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
+		syntax on
+	endif
+
+	filetype plugin indent on
+" }}}}
+
+
+" Bundles {{{{
+	if filereadable(expand("~/.vimrc.bundles"))
+		source ~/.vimrc.bundles
 	endif
 " }}}}
