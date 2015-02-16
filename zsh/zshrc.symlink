@@ -1,4 +1,4 @@
-# vim: fdm=marker sw=2 ts=2 sts=2 tw=80
+# vim: fdm=marker sw=2 ts=2 sts=2 tw=80 nofoldenable
 
 # Global Fixes {{{{
   # For sudo-ing aliases
@@ -23,6 +23,7 @@
 		# plugins
 	  zgen load bkonowitz/dotfiles vim
 		zgen oh-my-zsh plugins/git
+	  zgen load bkonowitz/dotfiles git
 		zgen oh-my-zsh plugins/sudo
 		zgen oh-my-zsh plugins/node
 		zgen oh-my-zsh plugins/npm
