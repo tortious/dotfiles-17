@@ -1,8 +1,9 @@
 !bin
-vim/.netrwhist
-vim/bundle/
-vim/backup/
-vim/undo/
+vim.symlink/.netrwhist
+vim.symlink/bundle/
+vim.symlink/backup/
+vim.symlink/undo/
+vim.symlink/viminfo
 *.sw[nop]
 .bundle
 .env
