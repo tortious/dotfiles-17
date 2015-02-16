@@ -1,7 +1,7 @@
 # Defines vim aliases and functions for the shell
 
 # System vars
-export EDTIOR=vim
+export EDITOR=vim
 export VISUAL=vim
 
 # Aliases
