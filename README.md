@@ -16,7 +16,13 @@ Requirements
 
 ... let's talk about that later. After things are super modular, I'll re-evaluate.
 
+Setup your shell as zsh first and foremost. Might address this with some snazzy install scripts.
+Also need git, obviously.
+
 Installation
 ------------------
 
 See above.
+
+Afterwards, make sure you take care of the little things, like setting JAVA_HOME in a .zshrc.local
+or env override. Also might make this automagical.

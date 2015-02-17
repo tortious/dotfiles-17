@@ -1,5 +1,11 @@
 # vim: fdm=marker sw=2 ts=2 sts=2 tw=80 nofoldenable
 
+# Env sourcing {{{{
+  if [ -e "$HOME/.envrc" ]; then
+    source "$HOME/.envrc"
+  fi
+# }}}}
+
 # Global Fixes {{{{
   # For sudo-ing aliases
   # https://wiki.archlinux.org/index.php/Sudo#Passing_aliases
