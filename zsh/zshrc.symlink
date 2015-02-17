@@ -27,6 +27,10 @@
 		# plugins
 	  zgen load bkonowitz/dotfiles zsh
 	  zgen load bkonowitz/dotfiles vim.symlink
+	  zgen load bkonowitz/dotfiles java
+	  zgen load bkonowitz/dotfiles node
+	  zgen load bkonowitz/dotfiles ruby
+	  zgen load bkonowitz/dotfiles tmux
 		zgen oh-my-zsh plugins/git
 	  zgen load bkonowitz/dotfiles git
 		zgen oh-my-zsh plugins/sudo
