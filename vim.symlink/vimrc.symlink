@@ -34,6 +34,7 @@ colorscheme grb256
 let g:netrw_liststyle=3
 set colorcolumn=+1
 set cursorline
+set diffopt+=vertical
 set guicursor=a:blinkon0
 set guioptions-=T
 set hlsearch
