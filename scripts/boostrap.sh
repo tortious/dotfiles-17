@@ -51,6 +51,11 @@ link_file () {
   fi
 }
 
+check_and_install_zgen() {
+  if [ ! -d "$HOME/.zgen" ]; then
+    git clone https://github.com/tarjoilija/zgen.git ~/.zgen
+  fi
+}
 install_dotfiles() {
   info "Installing dotfiles\n"
   local backup_all=true
@@ -70,6 +75,7 @@ install_vundles() {
   vim +PluginInstall +qall
 }
 
+check_and_install_zgen
 install_dotfiles
 install_vundles
 echo ''
