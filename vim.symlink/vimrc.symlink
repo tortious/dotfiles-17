@@ -9,14 +9,10 @@ endif
 let mapleader=","
 set autoread
 set backspace=indent,eol,start
-set noerrorbells
-set showcmd
-set showmatch
-set showmode
-set visualbell
+set noerrorbells visualbell
+set showcmd showmatch showmode
 set viminfo+=!
-set mouse=a
-set mousehide
+set mouse=a mousehide
 set tags=tags;/
 set clipboard=unnamed
 
@@ -26,7 +22,6 @@ set clipboard=unnamed
 if filereadable(expand("~/.vim/vundles.vim"))
  source ~/.vim/vundles.vim
 endif
-
 
 " =============== UI ===============
 set background=dark
@@ -47,6 +42,9 @@ set scrolloff=6
 set t_ti=t_te= " prevent vim from killing scrollback buffer
 set textwidth=100
 map <Leader>n :nohl<cr>
+
+" status line setup with git info
+set stl=%f\ %m\ %r%{fugitive#statusline()}\ Line:%l/%L\ Col:%v\ [%Y]
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
