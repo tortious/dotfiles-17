@@ -52,6 +52,11 @@ set ttimeoutlen=1
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow splitright
 
+ " Visual shifting (does not exit Visual mode), allows repeats
+ vnoremap < <gv
+ vnoremap > >gv
+ vnoremap . :normal .<CR>
+
 command! W w " Bind :W to :w"
 command! Q q " Bind :Q to :q
 command! Qall qall
