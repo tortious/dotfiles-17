@@ -7,6 +7,7 @@ alias gcfn='git clean -f -d -n'
 alias gci='git commit'
 alias gcl='git clone'
 alias gcm="git commit -m"
+alias gcob='git checkout -b'
 alias gcot='git checkout -t'
 alias gdm='git diff master'
 alias gdt='git difftool'
