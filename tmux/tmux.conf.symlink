@@ -14,13 +14,21 @@ bind k select-pane -U
 bind l select-pane -R
 bind-key -r C-h select-window -t :-
 bind-key -r C-l select-window -t :+
+
 # Add copy mode binding
-bind C-[ copy-mode]
+bind C-[ copy-mode
+
+# Update default binding of `Enter` to also use copy-pipe
+unbind -t vi-copy Enter
+bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
 
 # renumber windows
 set -g base-index 1
 set-window-option -g pane-base-index 1
 set -g renumber-windows on
+
+# stop the changing window names after they've been set
+set-option -g allow-rename off
 
 # force a reload of the config file
 unbind r
@@ -28,6 +36,14 @@ bind r source-file ~/.tmux.conf
 
 # moar scrollback
 set -g history-limit 10000
+
+# # quick pane cycling
+unbind ^A
+bind ^A select-pane -t :.+
+
+# enable utf-8 on status bar
+set -g status on
+set -g status-utf8 on
 
 # status bar
 set -g status-right "#[fg=colour155]#(pmset -g batt | ~/.bin/battinfo.rb) | #[fg=colour45]%d %b %R"
