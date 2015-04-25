@@ -14,6 +14,8 @@ jump() {
   cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
 }
 
+alias j='jump'
+
 mark() {
   if (( $# == 0 )); then
     MARK=$(basename "$PWD")
