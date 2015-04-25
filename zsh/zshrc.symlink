@@ -35,6 +35,7 @@
 	  zgen load bkonowitz/dotfiles vim.symlink
 
 	  zgen load bkonowitz/dotfiles docker
+	  zgen load bkonowitz/dotfiles go
 	  zgen load bkonowitz/dotfiles java
 	  zgen load bkonowitz/dotfiles node
 	  zgen load bkonowitz/dotfiles ruby
