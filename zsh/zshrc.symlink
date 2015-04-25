@@ -46,10 +46,10 @@
 		zgen load zsh-users/zsh-syntax-highlighting
 		zgen load zsh-users/zsh-history-substring-search
 		if [[ "$OSTYPE" == darwin* ]]; then
-			zgen oh-my-zsh plguins/brew
-			zgen oh-my-zsh plguins/brew-cask
-			zgen oh-my-zsh plguins/gem
-			zgen oh-my-zsh plguins/osx
+			zgen oh-my-zsh plugins/brew
+			zgen oh-my-zsh plugins/brew-cask
+			zgen oh-my-zsh plugins/gem
+			zgen oh-my-zsh plugins/osx
 		elif [[ "$OSTYPE" == cygwin ]]; then
 			zgen oh-my-zsh plugins/cygwin
 		fi
