@@ -3,6 +3,7 @@
 CUR="$(dirname $0)"
 source "$CUR/functions.zsh"
 source "$CUR/aliases.zsh"
+source "$CUR/jump.zsh"
 
 # awesome cd movements from zshkit
 setopt AUTOCD

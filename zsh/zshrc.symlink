@@ -38,7 +38,6 @@
     zgen load bkonowitz/dotfiles docker
     zgen load bkonowitz/dotfiles go
     zgen load bkonowitz/dotfiles java
-    zgen oh-my-zsh plugins/jump
     zgen load bkonowitz/dotfiles node
     zgen load bkonowitz/dotfiles ruby
     zgen load bkonowitz/dotfiles tmux
