@@ -16,57 +16,58 @@
   export LANGUAGE=en_US.UTF-8
   export LC_ALL=en_US.UTF-8
 
-	if [[ "$TERM" == xterm ]]; then
-		export TERM=xterm-256color
-	fi
+  if [[ "$TERM" == xterm ]]; then
+    export TERM=xterm-256color
+  fi
 
 # }}}}
 
 # Zgen {{{{
   source ~/.zgen/zgen.zsh
 
-	if ! zgen saved; then
-		echo "Creating a zgen save state"
+  if ! zgen saved; then
+    echo "Creating a zgen save state"
 
-		zgen oh-my-zsh
+    zgen oh-my-zsh
 
-		# plugins
-	  zgen load bkonowitz/dotfiles zsh
-	  zgen load bkonowitz/dotfiles vim.symlink
+    # plugins
+    zgen load bkonowitz/dotfiles zsh
+    zgen load bkonowitz/dotfiles vim.symlink
 
-	  zgen load bkonowitz/dotfiles direnv
-	  zgen load bkonowitz/dotfiles docker
-	  zgen load bkonowitz/dotfiles go
-	  zgen load bkonowitz/dotfiles java
-	  zgen load bkonowitz/dotfiles node
-	  zgen load bkonowitz/dotfiles ruby
-	  zgen load bkonowitz/dotfiles tmux
-		zgen oh-my-zsh plugins/git
-	  zgen load bkonowitz/dotfiles git
-		zgen oh-my-zsh plugins/sudo
-		zgen oh-my-zsh plugins/node
-		zgen oh-my-zsh plugins/npm
-		zgen oh-my-zsh plugins/coffee
-		zgen oh-my-zsh plugins/docker
-		zgen load bkonowitz/dotfiles docker
-		zgen load zsh-users/zsh-syntax-highlighting
-		zgen load zsh-users/zsh-history-substring-search
-		if [[ "$OSTYPE" == darwin* ]]; then
-			zgen oh-my-zsh plugins/brew
-			zgen oh-my-zsh plugins/brew-cask
-			zgen oh-my-zsh plugins/gem
-			zgen oh-my-zsh plugins/osx
-		elif [[ "$OSTYPE" == cygwin ]]; then
-			zgen oh-my-zsh plugins/cygwin
-		fi
+    zgen load bkonowitz/dotfiles direnv
+    zgen load bkonowitz/dotfiles docker
+    zgen load bkonowitz/dotfiles go
+    zgen load bkonowitz/dotfiles java
+    zgen oh-my-zsh plugins/jump
+    zgen load bkonowitz/dotfiles node
+    zgen load bkonowitz/dotfiles ruby
+    zgen load bkonowitz/dotfiles tmux
+    zgen oh-my-zsh plugins/git
+    zgen load bkonowitz/dotfiles git
+    zgen oh-my-zsh plugins/sudo
+    zgen oh-my-zsh plugins/node
+    zgen oh-my-zsh plugins/npm
+    zgen oh-my-zsh plugins/coffee
+    zgen oh-my-zsh plugins/docker
+    zgen load bkonowitz/dotfiles docker
+    zgen load zsh-users/zsh-syntax-highlighting
+    zgen load zsh-users/zsh-history-substring-search
+    if [[ "$OSTYPE" == darwin* ]]; then
+      zgen oh-my-zsh plugins/brew
+      zgen oh-my-zsh plugins/brew-cask
+      zgen oh-my-zsh plugins/gem
+      zgen oh-my-zsh plugins/osx
+    elif [[ "$OSTYPE" == cygwin ]]; then
+      zgen oh-my-zsh plugins/cygwin
+    fi
 
-		# completions
-		zgen load zsh-users/zsh-completions src
+    # completions
+    zgen load zsh-users/zsh-completions src
 
-		# theme
-		zgen load bkonowitz/dotfiles zsh/kono
+    # theme
+    zgen load bkonowitz/dotfiles zsh/kono
 
-		# save it all
-		zgen save
-	fi
+    # save it all
+    zgen save
+  fi
 # }}}}
