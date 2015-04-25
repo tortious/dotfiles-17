@@ -33,6 +33,8 @@
 		# plugins
 	  zgen load bkonowitz/dotfiles zsh
 	  zgen load bkonowitz/dotfiles vim.symlink
+
+	  zgen load bkonowitz/dotfiles docker
 	  zgen load bkonowitz/dotfiles java
 	  zgen load bkonowitz/dotfiles node
 	  zgen load bkonowitz/dotfiles ruby
@@ -43,6 +45,8 @@
 		zgen oh-my-zsh plugins/node
 		zgen oh-my-zsh plugins/npm
 		zgen oh-my-zsh plugins/coffee
+		zgen oh-my-zsh plugins/docker
+		zgen load bkonowitz/dotfiles docker
 		zgen load zsh-users/zsh-syntax-highlighting
 		zgen load zsh-users/zsh-history-substring-search
 		if [[ "$OSTYPE" == darwin* ]]; then
