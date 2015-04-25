@@ -1,0 +1,33 @@
+# Direnv stuff #
+################
+.direnv
+.envrc
+
+# OS generated files #
+######################
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# Project settings files #
+##########################
+.idea
+.buildpath
+.project
+.settings
+.vagrant
+
+# Editor files #
+################
+*~
+*.swp
+*.swo
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite

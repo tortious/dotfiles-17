@@ -8,7 +8,7 @@
 [color]
   ui = auto
 [core]
-  excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore_global
   autocrlf = input
 [fetch]
   prune = true

@@ -14,4 +14,3 @@ if [ ! -e "$HOME/.gitconfig.local" ]; then
   echo "[user]\n\tname = $name\n\temail = $email" >> $HOME/.gitconfig.local
   printf "~/.gitconfig.local written.\n"
 fi
-
