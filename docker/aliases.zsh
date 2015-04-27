@@ -2,9 +2,9 @@
 alias dps='docker ps'
 alias ds!='docker stop'
 alias ds='docker start'
-alias dclc='docker ps -a | awk 'NR > 1 {print $1}' | xargs docker rm'
-alias dclin='docker rmi $(docker images -a | awk '/none/ {print $3}')'
-alias dclin!='docker rmi -f $(docker images -a | awk '/none/ {print $3}')'
+alias dclc='docker ps -a | awk "NR > 1 {print $1}" | xargs docker rm'
+alias dclin='docker rmi $(docker images -a | awk "/none/ {print $3}")'
+alias dclin!='docker rmi -f $(docker images -a | awk "/none/ {print $3}")'
 
 # Docker Compose
 alias dc='docker-compose'
