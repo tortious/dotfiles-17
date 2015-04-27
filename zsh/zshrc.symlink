@@ -37,6 +37,7 @@
     zgen load bkonowitz/dotfiles direnv
     zgen load bkonowitz/dotfiles docker
     zgen load bkonowitz/dotfiles go
+    zgen oh-my-zsh plugins/golang
     zgen load bkonowitz/dotfiles java
     zgen load bkonowitz/dotfiles node
     zgen load bkonowitz/dotfiles ruby
