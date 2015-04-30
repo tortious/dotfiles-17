@@ -45,3 +45,4 @@ colors
 # prompt
  export PS1='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}]$(parse_git_dirty)%{$reset_color%} '
 
+[[ -f ~/.dir_colors ]] && eval $(gdircolors ~/.dir_colors)
