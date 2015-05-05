@@ -20,3 +20,5 @@
   default = current
 [push]
   default = current
+[credential]
+	helper = osxkeychain
