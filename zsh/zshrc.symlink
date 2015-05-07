@@ -38,6 +38,7 @@
     zgen load bkonowitz/dotfiles go
     zgen oh-my-zsh plugins/golang
     zgen load bkonowitz/dotfiles gpg
+    zgen oh-my-zsh plugins/pass
     zgen load bkonowitz/dotfiles java
     zgen load bkonowitz/dotfiles node
     zgen load bkonowitz/dotfiles ruby
