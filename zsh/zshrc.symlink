@@ -34,6 +34,7 @@
     zgen load bkonowitz/dotfiles zsh
     zgen load bkonowitz/dotfiles vim.symlink
 
+    zgen load bkonowitz/dotfiles chef
     zgen load bkonowitz/dotfiles direnv
     zgen load bkonowitz/dotfiles go
     zgen oh-my-zsh plugins/golang
