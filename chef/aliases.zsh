@@ -1,5 +1,12 @@
 # knife
-alias knl='knife node list'
 alias kcd='knife cookbook delete'
 alias kcl='knife cookbook list'
 alias kcu='knife cookbook upload'
+alias kne='knife node edit'
+alias knl='knife node list'
+alias kns='knife node show'
+alias krf='knife role from_file'
+alias krs='knife role show'
+alias kve='knife vault edit'
+alias kvs='knife vault show'
+alias kvu='knife vault update'
