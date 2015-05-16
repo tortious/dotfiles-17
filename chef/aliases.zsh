@@ -2,6 +2,7 @@
 alias kcd='knife cookbook delete'
 alias kcl='knife cookbook list'
 alias kcu='knife cookbook upload'
+alias kesl='knife ec2 server list'
 alias kef='knife environment from_file'
 alias kel='knife environment list'
 alias kes='knife environment show'
