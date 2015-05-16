@@ -26,3 +26,4 @@ alias tf='tail -1000f'
 alias tlf="tail -f"
 alias trunc='cat /dev/null >'
 alias watch='watch -n 1 '
+alias zgu='zgen update && sz'
