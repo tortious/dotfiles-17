@@ -3,6 +3,7 @@
 [alias]
   aa = add --all
   ci = commit -v
+  cl = clone
   co = checkout
   st = status
 [color]

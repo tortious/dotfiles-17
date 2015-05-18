@@ -1,5 +1,14 @@
 # Defines config for a kono-style zshell
 
+# Ensure languages are set
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+if [[ "$TERM" == xterm ]]; then
+  export TERM=xterm-256color
+fi
+
 CUR="$(dirname $0)"
 source "$CUR/functions.zsh"
 source "$CUR/aliases.zsh"

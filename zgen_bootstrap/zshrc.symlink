@@ -1,27 +1,5 @@
 # vim: fdm=marker sw=2 ts=2 sts=2 tw=80 nofoldenable
 
-# # Env sourcing {{{{
-#   if [ -e "$HOME/.envrc" ]; then
-#     source "$HOME/.envrc"
-#   fi
-# # }}}}
-
-# Global Fixes {{{{
-  # For sudo-ing aliases
-  # https://wiki.archlinux.org/index.php/Sudo#Passing_aliases
-  alias sudo='sudo '
-  
-  # Ensure languages are set
-  export LANG=en_US.UTF-8
-  export LANGUAGE=en_US.UTF-8
-  export LC_ALL=en_US.UTF-8
-
-  if [[ "$TERM" == xterm ]]; then
-    export TERM=xterm-256color
-  fi
-
-# }}}}
-
 # Zgen {{{{
   source ~/.zgen/zgen.zsh
 

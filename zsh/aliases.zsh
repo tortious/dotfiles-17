@@ -1,3 +1,7 @@
+# For sudo-ing aliases
+# https://wiki.archlinux.org/index.php/Sudo#Passing_aliases
+alias sudo='sudo '
+
 # OSX Specific
 if [[ "$OSTYPE" == darwin* ]]; then
   alias ls='gls'
