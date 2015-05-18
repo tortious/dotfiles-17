@@ -26,3 +26,14 @@ See above.
 
 Afterwards, make sure you take care of the little things, like setting JAVA_HOME in a .zshrc.local
 or env override. Also might make this automagical.
+
+For a basic get running with the full enchilada, simply clone the directory wherever your heart
+desires, and run 
+
+    ./scripts/bootstrap.sh
+
+That will link up all the appropriate symlinks for every module, as well as make use of
+zgen_bootstrap's base zshrc.symlink, ensuring first load links to all of the included modules. For
+alternative usage, it is recommended to grab the excellent lightweight zshell plugin manager
+[zgen](https://github.com/tarjoilija/zgen) and independently `zgen load` the modules of interest.
+Also in progress is a chef-cookbook with defaults for kitchenplan. Link coming soon.
