@@ -66,13 +66,9 @@ _chef() {
               (generate-args)
                 case $words[1] in
                   (template|file)
-                    local args; args=(
-                      "-s:SOURCE option to copy a file's content from to populate the template"
-                    )
-                    _describe -t args 'arg' args && ret=0
-                    # _arguments \
-                    #   '1: :_github_users' \
-                    # && ret=0
+                    _arguments \
+                      "1: :-s:SOURCE option to copy a file's content from to populate the template" \
+                      && ret=0
                   ;;
                 esac
               ;;
