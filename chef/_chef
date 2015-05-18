@@ -1,0 +1,29 @@
+#compdef chef
+#
+# Description
+# -----------
+#
+# Completion script for the chef cli from ChefDK (https://github.com/chef/chef-dk)
+# ---------------------------------------------------------------------------------
+#
+# Authors
+# -------
+# 
+# * Bryan Konowitz (https://github.com/bkono)
+#
+# -------------------------------------------
+
+local -a _chef_toplevel_commands
+_chef_toplevel_commands=(
+  "generate: scaffolding for various cookbook resources"
+  "gem: wrapper to manage rubygem installation for chef embedded ruby"
+  "exec: runs an arbitrary shell command with the ChefDK PATH"
+  "shell-init: emits shell commands to make ChefDK the primary ruby"
+  "install: reads a Policyfile.rb and generates a Policyfile.lock.jso"
+  "push: upload a Policyfile.lock.json and referenced cookbooks"
+  "update: updates a Policyfile.lock.json with the latest cookbooks from upstream sources"
+  "diff: shows an itemized diff between Policyfile locks"
+  "verify: runs a quick smoke test of the embedded applications"
+)
+
+_describe -t commands "chef subcommand" _chef_toplevel_commands
