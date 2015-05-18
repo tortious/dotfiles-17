@@ -22,60 +22,60 @@ _chef() {
   _arguments -C \
     '1:cmd:->cmds' \
     '*::arg:->args' \
-    && ret=0
+  && ret=0
 
-    case "$state" in
-      (cmds)
-        local commands; commands=(
-          "generate: scaffolding for various cookbook resources"
-          "gem: wrapper to manage rubygem installation for chef embedded ruby"
-          "exec: runs an arbitrary shell command with the ChefDK PATH"
-          "shell-init: emits shell commands to make ChefDK the primary ruby"
-          "install: reads a Policyfile.rb and generates a Policyfile.lock.jso"
-          "push: upload a Policyfile.lock.json and referenced cookbooks"
-          "update: updates a Policyfile.lock.json with the latest cookbooks from upstream sources"
-          "diff: shows an itemized diff between Policyfile locks"
-          "verify: runs a quick smoke test of the embedded applications"
-        )
-        _describe -t commands 'command' commands && ret=0
-      ;;
-      (args)
-        curcontext="${curcontext%:*:*}:chef-cmd-$words[1]:"
-        case $words[1] in
-          (gem|exec|shell-init|install|push|update|diff|verify) # this is temporary
-            _message 'no more arguments' && ret=0
-          ;;
-          (generate)
-            _arguments -C \
-              '1:generate-subcommand:->generate-subcommands' \
-              '*::generate-arg:->generate-args' \
-            && ret=0
-            case "$state" in
-              (generate-subcommands)
-                local subcommands; subcommands=(
-                  "app:creates an application layout that supports multiple cookbooks. -experimental"
-                  "cookbook:creates a single cookbook"
-                  "recipe:creates a new recipe"
-                  "attribute:creates a new attributes file"
-                  "template:creates a new template file"
-                  "file:creates a new cookbook file"
-                  "lwrp:creates a new LWRP resource and provider"
-                )
-                _describe -t subcommands 'subcommand' subcommands && ret=0
-              ;;
-              (generate-args)
-                case $words[1] in
-                  (template|file)
-                    _arguments \
-                      "1: :-s:SOURCE option to copy a file's content from to populate the template" \
-                      && ret=0
-                  ;;
-                esac
-              ;;
-            esac
-          ;;
-        esac
-      ;;
+  case "$state" in
+    (cmds)
+      local commands; commands=(
+        "generate: scaffolding for various cookbook resources"
+        "gem: wrapper to manage rubygem installation for chef embedded ruby"
+        "exec: runs an arbitrary shell command with the ChefDK PATH"
+        "shell-init: emits shell commands to make ChefDK the primary ruby"
+        "install: reads a Policyfile.rb and generates a Policyfile.lock.jso"
+        "push: upload a Policyfile.lock.json and referenced cookbooks"
+        "update: updates a Policyfile.lock.json with the latest cookbooks from upstream sources"
+        "diff: shows an itemized diff between Policyfile locks"
+        "verify: runs a quick smoke test of the embedded applications"
+      )
+      _describe -t commands 'command' commands && ret=0
+    ;;
+    (args)
+      curcontext="${curcontext%:*:*}:chef-cmd-$words[1]:"
+      case $words[1] in
+        (gem|exec|shell-init|install|push|update|diff|verify) # this is temporary
+          _message 'no more arguments' && ret=0
+        ;;
+        (generate)
+          _arguments -C \
+            '1:generate-subcommand:->generate-subcommands' \
+            '*::generate-arg:->generate-args' \
+          && ret=0
+          case "$state" in
+            (generate-subcommands)
+              local subcommands; subcommands=(
+                "app:creates an application layout that supports multiple cookbooks. -experimental"
+                "cookbook:creates a single cookbook"
+                "recipe:creates a new recipe"
+                "attribute:creates a new attributes file"
+                "template:creates a new template file"
+                "file:creates a new cookbook file"
+                "lwrp:creates a new LWRP resource and provider"
+              )
+              _describe -t subcommands 'subcommand' subcommands && ret=0
+            ;;
+            (generate-args)
+              case $words[1] in
+                (template|file)
+                  _arguments \
+                    "-s[SOURCE option to copy a file's content from to populate the template]" \
+                  && ret=0
+                ;;
+              esac
+            ;;
+          esac
+        ;;
+      esac
+    ;;
   esac
 }
 
