@@ -1,5 +1,7 @@
 # Docker
 alias dps='docker ps'
+alias drm='docker rm'
+alias drm!='docker rm -f'
 alias ds!='docker stop'
 alias ds='docker start'
 
