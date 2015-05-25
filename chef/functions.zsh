@@ -1,5 +1,10 @@
 # knife
 function kesd() { knife ec2 server delete $1 --purge }
+function kesdc() { 
+  knife ssh "name:$1" "sudo docker exec -ti consul consul leave && sudo docker stop consul" -x 'ec2-user'
+
+  knife ec2 server delete -N $1 --purge -y
+}
 function kesdn() { knife ec2 server delete --node-name $1 --purge }
 function kvcd() { 
   knife vault create $1 $2 -A bkonowitz,cschwoegler,mcowgill,sschwoegler -S "role:${1}_${2}_vault"
