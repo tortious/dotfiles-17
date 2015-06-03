@@ -8,8 +8,10 @@ function dlft() {
 
 function b2ddns!() {
   DOCKER_BRIDGE=`boot2docker ssh ifconfig docker0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'`
+  echo "Setting docker dns to the docker bridge @ $DOCKER_BRIDGE"
   boot2docker ssh sudo "ash -c \"echo EXTRA_ARGS=\'--dns $DOCKER_BRIDGE --dns $(scutil --dns | awk -F ': ' '/nameserver/{print $2}' | head -1) --dns-search service.consul\' > /var/lib/boot2docker/profile\""
   boot2docker restart
+  echo "... b2d restarted."
 }
 
 # function dclin() {

@@ -37,6 +37,7 @@ Plugin 'vim-scripts/tComment'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'plasticboy/vim-markdown'
 
 " Ruby
 Plugin 'tpope/vim-bundler'
