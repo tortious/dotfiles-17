@@ -5,6 +5,7 @@
   ci = commit -v
   cl = clone
   co = checkout
+  pr = pull-request
   st = status
 [color]
   ui = auto
