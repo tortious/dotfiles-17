@@ -24,6 +24,7 @@
     zgen load bkonowitz/dotfiles tmux
     zgen oh-my-zsh plugins/git
     zgen load bkonowitz/dotfiles git
+    zgen load bkonowitz/dotfiles hub
     # zgen oh-my-zsh plugins/node
     # zgen oh-my-zsh plugins/npm
     # zgen oh-my-zsh plugins/coffee
