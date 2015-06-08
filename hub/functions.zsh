@@ -9,7 +9,7 @@ function gprco() {
    repo=`print -P %2~`
   fi
 
-  echo "hub checkout https://github.com/$repo/pull/$prnum"
+  hub checkout https://github.com/$repo/pull/$prnum
 }
 
 function gpram() {
@@ -22,5 +22,5 @@ function gpram() {
    repo=`print -P %2~`
   fi
 
-  echo "hub am -3 https://github.com/$repo/pull/$prnum"
+  hub am -3 https://github.com/$repo/pull/$prnum
 }
