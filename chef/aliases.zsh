@@ -1,4 +1,6 @@
 # knife
+alias kbdt='knife block dt'
+alias kbp='knife block prod'
 alias kcd='knife cookbook delete'
 alias kcl='knife cookbook list'
 alias kcu='knife cookbook upload'

@@ -19,6 +19,21 @@ bind-key -r C-l select-window -t :+
 
 set-window-option -g xterm-keys on
 setw -g mode-mouse on
+setw -g mouse-resize-pane on
+setw -g mouse-select-pane on
+setw -g mouse-select-window on
+
+# Horizontal splits with s or C-s
+unbind s
+unbind C-s
+bind-key s split-window
+bind-key C-s split-window
+
+# # Vertical split with v or C-v
+unbind v
+unbind C-v
+bind-key v split-window -h
+bind-key C-v split-window -h
 
 # Add copy mode binding
 bind C-[ copy-mode
