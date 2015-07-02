@@ -40,6 +40,7 @@ alias gsfco='git submodule foreach git checkout'
 alias gsfd="git submodule foreach 'git checkout dev || true'"
 alias gsfe='git submodule foreach'
 alias gsfm='git submodule foreach git checkout master'
+alias gsfmp='git submodule foreach git checkout master;git submodule foreach git pull --rebase'
 alias gsfnm='git submodule foreach git branch | grep -v "* master"'
 alias gsfp!='git submodule foreach git push'
 alias gsfp='git submodule foreach git pull --rebase'
