@@ -1,8 +1,10 @@
 # brew
 alias bri='brew install'
+alias brln='brew link'
 alias brs='brew search'
 alias brrm='brew rm'
 alias bru='brew update'
+alias bruln='brew unlink'
 
 # brew cask
 alias bci='brew cask install'
