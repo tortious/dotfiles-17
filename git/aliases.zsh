@@ -16,6 +16,7 @@ alias gdom='git diff origin/master'
 alias gdt='git difftool'
 alias gf='git fetch'
 alias gib='git init --bare'
+alias gi='git init'
 alias glgs=pretty_git_log -5
 alias glm='ls -al `git status | grep modified | cut -d":" -f2`'
 alias gm!='git merge'

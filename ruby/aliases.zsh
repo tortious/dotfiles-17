@@ -13,8 +13,8 @@ alias killruby='killall -9 ruby'
 alias rubytags='ctags -R --languages=ruby --exclude=.git --exclude=log --exclude=tmp --exclude=target . $(bundle list --paths)'
 
 # Rubygems
-alias gi="gem install"
-alias giv="gem install -v"
+alias gemi="gem install"
+alias gemiv="gem install -v"
 
 # Rails
 alias m="migrate"
