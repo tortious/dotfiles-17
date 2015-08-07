@@ -40,6 +40,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'plasticboy/vim-markdown'
 
 " Ruby
+Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
