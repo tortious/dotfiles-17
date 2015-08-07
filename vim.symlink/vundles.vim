@@ -45,6 +45,9 @@ Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 
+" Postgres
+Plugin 'trevorgrayson/vim-oink'
+
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
 endif
