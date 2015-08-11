@@ -14,6 +14,10 @@ function b2ddns!() {
   echo "... b2d restarted."
 }
 
+function dcr() {
+  docker-compose kill $1 && docker-compose build $1 && docker-compose up $1
+}
+
 # function dclin() {
 #   eval "docker rmi $(docker images -a | awk '/$1/ {print $3}')"
 # }
