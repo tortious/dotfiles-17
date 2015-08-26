@@ -78,3 +78,8 @@ map <Leader>rn :call RenameFile()<cr>
 
 map <Leader>vi :tabe ~/.vimrc<CR>
 
+function WriteAndCreateDirs()
+    execute ':silent !mkdir -p %:h'
+    write
+endfunction
+command WW call WriteAndCreateDirs()
