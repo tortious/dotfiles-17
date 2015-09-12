@@ -1,6 +1,6 @@
 " =============== Completion ===============
 set smarttab
-set wildignore+=*/tmp/*,*/target/*,*.so,*.swp,*.zip,*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+set wildignore+=*/tmp/*,*/target/*,*/node_modules/*,*.so,*.swp,*.zip,*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 set wildmode=list:longest,list:full
 set complete=.,w,t
 function! InsertTabWrapper()
@@ -12,3 +12,4 @@ function! InsertTabWrapper()
   endif
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+map <Leader>ct :!ctags -Ra<CR>
