@@ -21,7 +21,6 @@ Plugin 'vim-scripts/ctags.vim'
 
 " Vim Improvements
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
 Plugin 'mtth/scratch.vim'
 Plugin 'Raimondi/delimitMate'
