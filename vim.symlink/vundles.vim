@@ -5,10 +5,8 @@ set rtp+=~/.vim/vundles/ " Submodules
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-
-" Todo - pull all these out to separate .vundles
-" Project
-Plugin 'ctrlpvim/ctrlp.vim'
+"
+" Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'xolox/vim-misc'
 
 " UI
@@ -32,8 +30,11 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/tComment'
 Plugin 'Shougo/neocomplete'
+Plugin 'Shougo/neomru.vim'
 Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/vimproc.vim'
 Plugin 'honza/vim-snippets'
 
 " Languages
