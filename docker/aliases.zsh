@@ -14,10 +14,13 @@ alias dcu='docker-compose up'
 
 # Docker Machine
 alias dm='docker-machine'
+alias dmd='docker-machine stop'
+alias dmk='docker-machine kill'
 alias dmls='docker-machine ls'
+alias dmr='docker-machine restart'
 alias dmrm='docker-machine rm'
-alias dmk='docker-machine stop'
-alias dms='docker-machine start'
+alias dms='docker-machine ssh'
+alias dmu='docker-machine start'
 
 # Boot2docker
 alias bd='boot2docker'
