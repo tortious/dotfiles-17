@@ -12,6 +12,8 @@ Plugin 'xolox/vim-misc'
 " UI
 Plugin 'chriskempson/base16-vim'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'dandorman/vim-colors'
+Plugin 'bling/vim-airline'
 
 " Search
 Plugin 'rking/ag.vim'
