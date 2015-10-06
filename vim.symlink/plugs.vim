@@ -14,10 +14,12 @@ Plug 'rking/ag.vim'
 Plug 'vim-scripts/ctags.vim'
 
 " Vim Improvements
+Plug 'Raimondi/delimitMate'
+Plug 'ajh17/VimCompletesMe'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'godlygeek/tabular'
+Plug 'honza/vim-snippets'
 Plug 'mtth/scratch.vim'
-Plug 'Raimondi/delimitMate'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
@@ -25,7 +27,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/tComment'
-Plug 'honza/vim-snippets'
 
 " Languages
 Plug 'derekwyatt/vim-scala'
