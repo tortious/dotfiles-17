@@ -2,7 +2,7 @@
 set smarttab
 set wildignore+=*/tmp/*,*/target/*,*/node_modules/*,*.so,*.swp,*.zip,*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 set wildmode=list:longest,list:full
-set complete=.,w,t
+set complete=.,w,t,b,u,]
 function! InsertTabWrapper()
   let col = col('.') - 1
   if !col || getline('.')[col - 1] !~ '\k'
