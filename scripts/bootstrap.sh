@@ -75,9 +75,18 @@ install_vundles() {
   vim +PluginInstall +qall
 }
 
+install_plugs() {
+  if [ ! -e "$HOME/.vim/autoload/plug.vim" ]; then
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+          https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  fi
+
+  vim +PlugInstall +qall
+}
+
 check_and_install_zgen
 install_dotfiles
-install_vundles
+install_plugs
 echo ''
 echo "All done!"
 
