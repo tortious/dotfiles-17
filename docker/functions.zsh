@@ -1,7 +1,11 @@
 function dccl() {
+  echo "Removing exited containers ..."
   docker rm -v $(docker ps -a -q -f status=exited)
+  echo "... and dangling"
   docker rmi $(docker images -f "dangling=true" -q)
+  echo "... wrapping up with the docker-cleanup-volumes image"
   docker run -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker:/var/lib/docker --rm martin/docker-cleanup-volumes
+  echo "... all done."
 }
 function dclc() {
   docker ps -a | awk 'NR > 1 {print $1}' | xargs docker rm
