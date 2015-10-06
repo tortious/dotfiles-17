@@ -36,3 +36,9 @@ if exists("+undofile")
   set undodir+=~/.vim/undo//
   set undofile
 endif
+
+" Open files where we left off
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif

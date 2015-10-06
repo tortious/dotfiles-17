@@ -83,3 +83,27 @@ function WriteAndCreateDirs()
     write
 endfunction
 command WW call WriteAndCreateDirs()
+
+" change vim cursor depending on the mode
+if has("unix")
+  let s:uname = system("uname -s")
+  if s:uname == "Darwin\n"
+    " OS X iTerm 2 settings
+    if exists('$TMUX')
+      let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+      let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+    else
+      let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+      let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+    endif
+  else
+    " linux settings (gnome-terminal)
+    " TODO: Presently in GNOME3 terminal seems to ignore this gconf setting.
+    " Need to open a bug with them...
+    if has("autocmd")
+      au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+      au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+      au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+    endif
+  endif
+endif

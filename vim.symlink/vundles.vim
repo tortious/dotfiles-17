@@ -5,15 +5,15 @@ set rtp+=~/.vim/vundles/ " Submodules
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-
-" Todo - pull all these out to separate .vundles
-" Project
+"
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'xolox/vim-misc'
 
 " UI
 Plugin 'chriskempson/base16-vim'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'dandorman/vim-colors'
+Plugin 'bling/vim-airline'
 
 " Search
 Plugin 'rking/ag.vim'
@@ -21,7 +21,6 @@ Plugin 'vim-scripts/ctags.vim'
 
 " Vim Improvements
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
 Plugin 'mtth/scratch.vim'
 Plugin 'Raimondi/delimitMate'
@@ -32,6 +31,13 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/tComment'
+Plugin 'Shougo/neocomplete'
+Plugin 'Shougo/neomru.vim'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
+" Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'honza/vim-snippets'
 
 " Languages
 Plugin 'derekwyatt/vim-scala'

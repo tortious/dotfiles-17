@@ -25,7 +25,16 @@ endif
 
 " =============== UI ===============
 set background=dark
-colorscheme grb256
+colorscheme molokai "tomorrow-night-bright grb256
+
+set t_Co=256 " Force 256 colors
+" in case t_Co alone doesn't work, add this as well:
+" i.e. Force 256 colors harder
+let &t_AB="\e[48;5;%dm"
+let &t_AF="\e[38;5;%dm"
+set term=screen-256color
+let $TERM='screen-256color'
+
 let g:netrw_liststyle=3
 let g:netrw_bufsettings = "noma nomod nu nobl nowrap ro rnu"
 set colorcolumn=+1
@@ -40,6 +49,7 @@ set relativenumber
 set numberwidth=5
 set ruler
 set scrolloff=6
+set t_ut= " improve screen clearing by using the background color
 set t_ti=t_te= " prevent vim from killing scrollback buffer
 set textwidth=100
 map <Leader>n :nohl<cr>
