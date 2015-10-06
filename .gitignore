@@ -2,6 +2,7 @@
 vim.symlink/.netrwhist
 vim.symlink/bundle/
 vim.symlink/backup/
+vim.symlink/plugged/
 vim.symlink/undo/
 vim.symlink/viminfo
 *.sw[nop]
