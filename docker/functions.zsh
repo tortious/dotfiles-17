@@ -24,7 +24,11 @@ function b2ddns!() {
 }
 
 function dcr() {
-  docker-compose kill $1 && docker-compose build $1 && docker-compose up $1
+  docker-compose kill $1 && docker-compose build $1 && docker-compose up -d $1
+}
+
+function dcnix() {
+  docker-compose kill $1 && docker-compose rm -f $1
 }
 
 # function dclin() {
