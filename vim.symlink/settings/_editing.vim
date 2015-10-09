@@ -78,11 +78,11 @@ map <Leader>rn :call RenameFile()<cr>
 
 map <Leader>vi :tabe ~/.vimrc<CR>
 
-function WriteAndCreateDirs()
+function! WriteAndCreateDirs()
     execute ':silent !mkdir -p %:h'
     write
 endfunction
-command WW call WriteAndCreateDirs()
+command! WW call WriteAndCreateDirs()
 
 " change vim cursor depending on the mode
 if has("unix")
