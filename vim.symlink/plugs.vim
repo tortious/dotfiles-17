@@ -18,8 +18,8 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'godlygeek/tabular'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'vim-scripts/tComment'
 
 " Vim Improvements
 Plug 'ajh17/VimCompletesMe'
