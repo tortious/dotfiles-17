@@ -13,21 +13,24 @@ Plug 'bling/vim-airline'
 Plug 'rking/ag.vim'
 Plug 'vim-scripts/ctags.vim'
 
-" Vim Improvements
+" Editing
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Raimondi/delimitMate'
+Plug 'godlygeek/tabular'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/tComment'
+
+" Vim Improvements
 Plug 'ajh17/VimCompletesMe'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'godlygeek/tabular'
 Plug 'honza/vim-snippets'
 Plug 'mtth/scratch.vim'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
 Plug 'vim-scripts/matchit.zip'
-Plug 'vim-scripts/tComment'
 
 " Languages
 Plug 'derekwyatt/vim-scala'
