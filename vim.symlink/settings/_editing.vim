@@ -74,9 +74,9 @@ function! RenameFile()
     redraw!
   endif
 endfunction
-map <Leader>rn :call RenameFile()<cr>
+nnoremap <Leader>rn :call RenameFile()<cr>
 
-map <Leader>vi :tabe ~/.vimrc<CR>
+nnoremap <Leader>vi :tabe ~/.vimrc<CR>
 
 function! WriteAndCreateDirs()
     execute ':silent !mkdir -p %:h'

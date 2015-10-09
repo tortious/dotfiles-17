@@ -12,4 +12,10 @@ function! InsertTabWrapper()
   endif
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
-map <Leader>ct :!ctags -Ra<CR>
+
+if exists(":Dispatch")
+  nnoremap <Leader>ct :Dispatch! ctags -Ra<CR>
+else
+  nnoremap <Leader>ct :!ctags -Ra<CR>
+endif
+

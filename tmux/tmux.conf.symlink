@@ -6,6 +6,9 @@ set -g xterm-keys on
 unbind C-b
 set -g prefix C-a
 
+# Speed up commands
+set-option -sg escape-time 0
+
 # act like vim
 setw -g mode-keys vi
 bind-key -t vi-copy 'v' begin-selection

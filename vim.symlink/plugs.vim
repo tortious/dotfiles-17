@@ -45,8 +45,9 @@ Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 
-" Postgres
-Plug 'trevorgrayson/vim-oink'
+" DBs
+" Plug 'trevorgrayson/vim-oink'
+Plug 'vim-scripts/dbext.vim'
 
 if filereadable(expand("~/.vimrc.plugs.local"))
   source ~/.vimrc.plugs.local
