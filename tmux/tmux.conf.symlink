@@ -26,11 +26,15 @@ setw -g mouse-resize-pane on
 setw -g mouse-select-pane on
 setw -g mouse-select-window on
 
+# Rebind the new window, to add creating with pane current path
+unbind c
+bind c new-window -c "#{pane_current_path}"
+
 # Horizontal splits with s or C-s
 unbind s
 unbind C-s
-bind-key s split-window
-bind-key C-s split-window
+bind-key s split-window -c "#{pane_current_path}"
+bind-key C-s split-window -c "#{pane_current_path}"
 
 # # Vertical split with v or C-v
 unbind v
