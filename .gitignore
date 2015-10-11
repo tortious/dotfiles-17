@@ -8,3 +8,4 @@ vim.symlink/viminfo
 *.sw[nop]
 .bundle
 .env
+tags
