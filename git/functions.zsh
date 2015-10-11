@@ -29,6 +29,15 @@ function gbsu() {
   git branch --set-upstream-to=origin/$target $branch
 }
 
+function gclmkd() {
+  repo=$1
+  arr=(${(s:/:)repo})
+  directory=$arr[1]
+
+  mkdir $directory && cd $directory
+  hub clone $repo
+}
+
 
 HASH="%C(yellow)%h%Creset"
 RELATIVE_TIME="%Cgreen(%ar)%Creset"
