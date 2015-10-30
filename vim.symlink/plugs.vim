@@ -30,6 +30,7 @@ Plug 'mtth/scratch.vim'
 Plug 'shougo/neocomplete.vim'
 Plug 'shougo/neosnippet.vim'
 Plug 'shougo/neosnippet-snippets'
+Plug 'shougo/vimproc.vim'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
@@ -48,6 +49,11 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
+
+" Typescript
+Plug 'clausreinke/typescript-tools.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'quramy/tsuquyomi'
 
 " DBs
 " Plug 'trevorgrayson/vim-oink'
