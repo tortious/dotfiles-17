@@ -10,3 +10,4 @@ alias tls='tmux ls'
 alias tns='tmux new -s'
 alias tks='tmux kill-session -t'
 alias tat='tmux new-session -As "$(basename "$PWD" | tr . -)"'
+alias ntmate="TMUX='' tmate"
