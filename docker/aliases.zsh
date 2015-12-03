@@ -30,6 +30,6 @@ alias bdd='boot2docker down'
 alias bdu='boot2docker up'
 
 # Docker Cleanup
-alias drmq='docker rm `docker ps -a -q`'
-alias drmiq='docker rmi `docker images -a -q`'
+alias drmq='docker rm -v $(docker ps -a -q -f status=exited)'
+alias drmiq='docker rmi $(docker images -f "dangling=true" -q)'
 alias dvc!='docker-volumes rm `docker-volumes list | grep docker | cut -d"|" -f1`'
