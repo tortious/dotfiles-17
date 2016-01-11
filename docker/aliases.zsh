@@ -2,6 +2,8 @@
 alias dps='docker ps'
 alias drm='docker rm'
 alias drm!='docker rm -f'
+alias drmi='docker rmi'
+alias drmi!='docker rmi -f'
 alias ds!='docker stop'
 alias ds='docker start'
 
