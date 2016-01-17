@@ -1,0 +1,79 @@
+" color
+syntax on
+
+" show
+set expandtab
+set smarttab
+set smartindent
+set noerrorbells
+
+set showmatch
+set relativenumber
+set title
+set scrolloff=3
+set wrap
+
+" edit
+set undolevels=300
+set history=300
+set iminsert=0
+set imsearch=0
+set imdisable
+
+" statusline
+set laststatus=2
+set cmdheight=2
+set ruler
+set showcmd
+set wildmenu
+set wildmode=list:longest
+
+" search
+set ignorecase
+set smartcase
+set wrapscan
+set hlsearch
+set incsearch 
+set clipboard=unnamed
+
+" move between assistant editors
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+
+" jump back and forward
+nnoremap ,, :pjump<CR>
+nnoremap ,. :njump<CR>
+
+" quick open
+nnoremap <C-p> :xccmd openQuickly<cr>
+
+" navigator
+nnoremap <C-n> :xccmd toggleNavigatorsVisibility<cr>
+
+" comments
+nnoremap gcc :xccmd commentAndUncommentCurrentLines<cr>
+vnoremap gc  :xccmd commentAndUncommentCurrentLines<cr>
+
+" jump to issues
+nmap ;e :xcmenucmd Jump to Next Issue<cr>
+nmap ;E :xcmenucmd Jump to Previous Issue<cr>
+
+" dont loose selection on indenting
+vnoremap > >gv
+vnoremap < <gv
+
+" dot works in visual selection mode!
+vnoremap . :norm.<cr>
+
+" D deletes to the end of the line
+nnoremap D d$
+
+" Y yanks to the end of the line
+nnoremap Y y$
+
+" tab movement
+nnoremap gT :xccmd selectPreviousTab<cr>
+nnoremap gt :xccmd selectNextTab<cr>
+
