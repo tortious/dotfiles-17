@@ -7,7 +7,8 @@ Plug 'xolox/vim-misc'
 Plug 'chriskempson/base16-vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'dandorman/vim-colors'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Search
 Plug 'rking/ag.vim'
