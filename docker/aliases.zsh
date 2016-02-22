@@ -11,7 +11,7 @@ alias ds='docker start'
 alias dc='docker-compose'
 alias dcb='docker-compose build'
 alias dck='docker-compose kill'
-alias dcp='docker-compose pull --allow-insecure-ssl'
+alias dcp='docker-compose pull'
 alias dcu='docker-compose up'
 
 # Docker Machine
