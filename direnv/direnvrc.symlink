@@ -17,7 +17,11 @@ use_ruby() {
 }
 
 use_go() {
-  export GOROOT="/usr/local/Cellar/go/$1/libexec"
+  if [[ "$OSTYPE" == darwin* ]]; then
+    export GOROOT="/usr/local/Cellar/go/$1/libexec"
+  else
+    export GOROOT="/usr/local/go/$1"
+  fi
 
   if [ ! -e "$GOROOT" ]; then
     echo ""
@@ -32,7 +36,11 @@ use_go() {
 }
 
 use_go_default() {
-  export GOROOT="/usr/local/opt/go/libexec"
+  if [[ "$OSTYPE" == darwin* ]]; then
+    export GOROOT="/usr/local/opt/go/libexec"
+  else
+    export GOROOT="/usr/local/go/default"
+  fi
 
   load_prefix $GOROOT
   export GOPATH=$PWD/code/go
