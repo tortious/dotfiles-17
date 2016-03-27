@@ -72,7 +72,7 @@ install_vundles() {
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle.vim
   fi
 
-  vim +PluginInstall +qall
+  vim +PlugInstall +qall
 }
 
 check_and_install_zgen
