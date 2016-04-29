@@ -10,6 +10,7 @@
 
     # plugins
     zgen load bkonowitz/dotfiles zsh
+    zgen load bkonowitz/dotfiles ssh
     zgen load bkonowitz/dotfiles vim.symlink
 
     zgen load bkonowitz/dotfiles chef
