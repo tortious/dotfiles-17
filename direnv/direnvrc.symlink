@@ -1,5 +1,6 @@
 PATH_add ~/Dropbox/Scripts/bin
 PATH_add ~/.bin
+PATH_add ~/.local/bin
 PATH_add $GOPATH/bin
 
 # Extensions
