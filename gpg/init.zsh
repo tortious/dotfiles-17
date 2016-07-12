@@ -4,6 +4,11 @@ if [ -f "${HOME}/.gpg-agent-info" ]; then
   . "${HOME}/.gpg-agent-info"
   export GPG_AGENT_INFO
   export SSH_AUTH_SOCK
+else
+  $(which gpg-agent) --daemon --disable-scdaemon --write-env-file "${HOME}/.gpg-agent-info"
+  . "${HOME}/.gpg-agent-info"
+  export GPG_AGENT_INFO
+  export SSH_AUTH_SOCK
 fi
 
 export GPG_TTY=$(tty)
