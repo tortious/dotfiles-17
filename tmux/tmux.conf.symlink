@@ -91,5 +91,18 @@ set -g window-status-current-format "#[fg=colour234,bg=colour39]#[fg=colour25
 # switch to last pane
 bind-key C-a last-pane
 
+# enable yanking within ssh
+# transfer copied text to attached terminal with yank:
+# https://github.com/sunaku/home/blob/master/bin/yank
+bind-key -t vi-copy y copy-pipe 'yank > #{pane_tty}'
+
+# transfer copied text to attached terminal with yank:
+# https://github.com/sunaku/home/blob/master/bin/yank
+bind-key -n M-y run-shell 'tmux save-buffer - | yank > #{pane_tty}'
+
+# transfer previously copied text (chosen from a menu) to attached terminal:
+# https://github.com/sunaku/home/blob/master/bin/yank
+bind-key -n M-Y choose-buffer 'run-shell "tmux save-buffer -b \"%%\" - | yank > #{pane_tty}"'
+
 # Local config
 if-shell "[ -f ~/.tmux.conf.local ]" 'source ~/.tmux.conf.local'
