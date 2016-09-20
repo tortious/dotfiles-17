@@ -56,6 +56,11 @@ Plug 'clausreinke/typescript-tools.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'quramy/tsuquyomi'
 
+" Javascript
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'flowtype/vim-flow'
+
 " DBs
 " Plug 'trevorgrayson/vim-oink'
 Plug 'vim-scripts/dbext.vim'
