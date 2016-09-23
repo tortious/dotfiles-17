@@ -20,13 +20,13 @@ endif
 set background=dark
 colorscheme molokai "tomorrow-night-bright grb256
 
-set t_Co=256 " Force 256 colors
+" set t_Co=256 " Force 256 colors
 " in case t_Co alone doesn't work, add this as well:
 " i.e. Force 256 colors harder
 let &t_AB="\e[48;5;%dm"
 let &t_AF="\e[38;5;%dm"
-set term=screen-256color
-let $TERM='screen-256color'
+" set term=screen-256color
+" let $TERM='screen-256color'
 
 let g:netrw_liststyle=3
 let g:netrw_bufsettings = "noma nomod nu nobl nowrap ro rnu"
