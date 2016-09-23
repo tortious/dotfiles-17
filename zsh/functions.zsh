@@ -19,3 +19,12 @@ function tophist() {
 function used-ports() {
   lsof -i | grep LISTEN
 }
+
+function usage() {
+  if ! type gsort >/dev/null 2>&1; then
+    echo "gsort not defined, is required"
+    return
+  fi
+
+  du -h -d "${2:-1}" "${1:-.}" | gsort -h | sed "s:\./::" | sed "s:$HOME:~:"
+}

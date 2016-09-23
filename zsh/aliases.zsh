@@ -13,6 +13,11 @@ if [[ "$OSTYPE" == darwin* ]]; then
   alias wifi='networksetup -setairportpower en0'
 fi
 
+if type "mmake" >/dev/null; then
+  echo "mmake available, setting alias for make"
+  alias make=mmake
+fi
+
 alias -g G2='| grep -C2'
 alias -g G='| grep'
 alias -g L='| wc -l'
@@ -25,9 +30,14 @@ alias ll='ls -al --color=auto'
 alias md='mkdir -p'
 alias remore='!! | more'
 alias retag='ctags -Ra'
+alias sort='gsort'
 alias sz='source ~/.zshrc'
 alias tf='tail -1000f'
 alias tlf="tail -f"
 alias trunc='cat /dev/null >'
 alias watch='watch -n 1 '
 alias zgu='zgen update && sz'
+
+#if [ -x "$(command -v ccat)" ]; then
+#  alias cat=ccat
+#fi

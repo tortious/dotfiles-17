@@ -1,69 +1,42 @@
 call plug#begin('~/.vim/plugged')
-
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'xolox/vim-misc'
-
-" UI
-Plug 'chriskempson/base16-vim'
-Plug 'flazz/vim-colorschemes'
-Plug 'dandorman/vim-colors'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-" Search
-Plug 'rking/ag.vim'
-Plug 'vim-scripts/ctags.vim'
-
-" Editing
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'Raimondi/delimitMate'
-Plug 'godlygeek/tabular'
+" Plug 'Shougo/deoplete.nvim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'arcticicestudio/nord-vim'
+Plug 'dag/vim-fish'
+Plug 'docunext/closetag.vim'
+Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
+" Plug 'fishbullet/deoplete-ruby'
+Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'maralla/completor.vim'
+Plug 'mhartington/oceanic-next'
+" Plug 'roxma/nvim-yarp'
+" Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'ryanoasis/vim-devicons'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-
-" Vim Improvements
-" Plug 'ajh17/VimCompletesMe'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'honza/vim-snippets'
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'mtth/scratch.vim'
-Plug 'shougo/neocomplete.vim'
-Plug 'shougo/neosnippet.vim'
-Plug 'shougo/neosnippet-snippets'
-Plug 'shougo/vimproc.vim'
-Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-repeat'
-Plug 'vim-scripts/matchit.zip'
-
-" Languages
-Plug 'derekwyatt/vim-scala'
-Plug 'elixir-lang/vim-elixir'
-Plug 'kchmck/vim-coffee-script'
-Plug 'plasticboy/vim-markdown'
-
-" Ruby
-Plug 't9md/vim-ruby-xmpfilter'
-Plug 'thoughtbot/vim-rspec'
-Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-ruby/vim-ruby'
+Plug 'vim-scripts/matchit.zip'
+Plug 'w0rp/ale'
+Plug 'z0mbix/vim-shfmt', { 'for': ['sh', 'zsh'] }
+" Plug 'zchee/deoplete-go', { 'do': 'make'}
+let g:deoplete#enable_at_startup = 1
 
-" Typescript
-Plug 'clausreinke/typescript-tools.vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'quramy/tsuquyomi'
-
-" Javascript
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'flowtype/vim-flow'
-
-" DBs
-" Plug 'trevorgrayson/vim-oink'
-Plug 'vim-scripts/dbext.vim'
+" Maybes
+" Plug 'maralla/completor.vim'
+" Plug 'godlygeek/tabular'
+" Plug 'Raimondi/delimitMate'
 
 if filereadable(expand("~/.vimrc.plugs.local"))
   source ~/.vimrc.plugs.local

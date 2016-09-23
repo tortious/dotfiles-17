@@ -9,18 +9,52 @@
   st = status
 [color]
   ui = auto
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
 [core]
   excludesfile = ~/.gitignore_global
 	autocrlf = input
+	editor = nvim
+	pager = cat
+	ignorecase = false
+	safecrlf = warn
 [fetch]
   prune = true
 [include]
   path = ~/.gitconfig.local
 [merge]
-  ff = only
+  ; ff = only
+	tool = fugitive
 [pull]
   default = current
 [push]
-  default = current
+	default = current
 [credential]
-	helper = osxkeychain
+	helper = !aws --profile codepipeline codecommit credential-helper $@
+	UseHttpPath = true
+[mergetool "fugitive"]
+	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+	trustExitCode = false
+[ghq]
+	root = /Users/bkonowitz/src
+[ghq "https://git.kono.sh"]
+  vcs = git
+[url "https://git.kono.sh/"]
+	insteadOf = ssh://git.kono.sh/
+[url "ssh://bkono@vs-ssh.visualstudio.com/_ssh"]
+  insteadOf = "https://bkono.visualstudio.com"
+[url "ssh://bkono@vs-ssh.visualstudio.com/_ssh"]
+  insteadOf = "ssh://bkono.visualstudio.com"
+[url "ssh://git-codecommit.us-west-2.amazonaws.com"]
+  insteadOf = "https://git-codecommit.us-west-2.amazonaws.com"
+[user]
+	name = Bryan Konowitz
+	email = bryan@kono.sh
+[g2 "panic"]
+	excludes = -e tags -e tags.* -e .swp -e .swo -e .settings -e .classpath -e *.iml -e *.idea -e .direnv -e .envrc -e .DS_Store
+[diff]
+	tool = p4merge
+[mergetool]
+	keepBackup = false

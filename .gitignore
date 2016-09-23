@@ -5,6 +5,12 @@ vim.symlink/backup/
 vim.symlink/plugged/
 vim.symlink/undo/
 vim.symlink/viminfo
+nvim/.netrwhist
+nvim/bundle/
+nvim/backup/
+nvim/plugged/
+nvim/undo/
+nvim/viminfo
 *.sw[nop]
 .bundle
 .env
