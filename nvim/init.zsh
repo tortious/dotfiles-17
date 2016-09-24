@@ -13,8 +13,11 @@ fi
 
 # aliases
 unalias nvim 2>/dev/null
-alias nvim="direnv exec /usr/bin/nvim"
 unset EDITOR
-export EDITOR=nvim
 unalias e 2>/dev/null
+
+NVBIN="$(which nvim)"
+echo "setting nvim to $NVBIN"
+alias nvim="direnv exec $NVBIN"
+export EDITOR=nvim
 alias e=$EDITOR

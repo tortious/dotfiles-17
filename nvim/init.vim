@@ -17,9 +17,6 @@ if filereadable(expand("~/.config/nvim/plugs.vim"))
 endif
 
 " =============== UI ===============
-set background=dark
-colorscheme molokai "tomorrow-night-bright grb256
-
 " set t_Co=256 " Force 256 colors
 " in case t_Co alone doesn't work, add this as well:
 " i.e. Force 256 colors harder
