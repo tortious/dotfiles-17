@@ -5,6 +5,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'dandorman/vim-colors'
 Plug 'mhartington/oceanic-next'
+Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -12,6 +13,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'rking/ag.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'c0r73x/neotags.nvim'
+Plug 'scrooloose/nerdtree'
 
 " Editing
 Plug 'AndrewRadev/splitjoin.vim'
