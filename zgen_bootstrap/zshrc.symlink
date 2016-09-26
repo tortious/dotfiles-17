@@ -9,34 +9,34 @@
     zgen oh-my-zsh
 
     # plugins
-    zgen load bkonowitz/dotfiles zsh
-    zgen load bkonowitz/dotfiles ssh
-    zgen load bkonowitz/dotfiles vim.symlink
-    zgen load bkonowitz/dotfiles nvim
+    zgen load bkono/dotfiles zsh
+    zgen load bkono/dotfiles ssh
+    zgen load bkono/dotfiles vim.symlink
+    zgen load bkono/dotfiles nvim
 
-    zgen load bkonowitz/dotfiles chef
-    zgen load bkonowitz/dotfiles direnv
-    zgen load bkonowitz/dotfiles go
+    zgen load bkono/dotfiles chef
+    zgen load bkono/dotfiles direnv
+    zgen load bkono/dotfiles go
     zgen oh-my-zsh plugins/golang
-    zgen load bkonowitz/dotfiles gpg
+    zgen load bkono/dotfiles gpg
     # zgen oh-my-zsh plugins/pass
-    zgen load bkonowitz/dotfiles java
-    zgen load bkonowitz/dotfiles node
-    zgen load bkonowitz/dotfiles ruby
-    zgen load bkonowitz/dotfiles tmux
+    zgen load bkono/dotfiles java
+    zgen load bkono/dotfiles node
+    zgen load bkono/dotfiles ruby
+    zgen load bkono/dotfiles tmux
     zgen oh-my-zsh plugins/git
-    zgen load bkonowitz/dotfiles git
-    zgen load bkonowitz/dotfiles hub
+    zgen load bkono/dotfiles git
+    zgen load bkono/dotfiles hub
     # zgen oh-my-zsh plugins/node
     # zgen oh-my-zsh plugins/npm
     # zgen oh-my-zsh plugins/coffee
-    zgen load bkonowitz/dotfiles docker
+    zgen load bkono/dotfiles docker
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load zsh-users/zsh-history-substring-search
     if [[ "$OSTYPE" == darwin* ]]; then
       zgen oh-my-zsh plugins/brew
       zgen oh-my-zsh plugins/brew-cask
-      zgen load bkonowitz/dotfiles brew
+      zgen load bkono/dotfiles brew
       # zgen oh-my-zsh plugins/gem
       zgen oh-my-zsh plugins/osx
     elif [[ "$OSTYPE" == cygwin ]]; then
@@ -47,7 +47,7 @@
     zgen load zsh-users/zsh-completions src
 
     # theme
-    zgen load bkonowitz/dotfiles zsh/kono
+    zgen load bkono/dotfiles zsh/kono
 
     # save it all
     zgen save
