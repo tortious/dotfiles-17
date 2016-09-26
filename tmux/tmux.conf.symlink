@@ -21,10 +21,10 @@ bind-key -r C-h select-window -t :-
 bind-key -r C-l select-window -t :+
 
 set-window-option -g xterm-keys on
-setw -g mode-mouse on
-setw -g mouse-resize-pane on
-setw -g mouse-select-pane on
-setw -g mouse-select-window on
+# setw -g mode-mouse on
+# setw -g mouse-resize-pane on
+# setw -g mouse-select-pane on
+# setw -g mouse-select-window on
 
 # Rebind the new window, to add creating with pane current path
 unbind c
@@ -70,7 +70,7 @@ bind ^A select-pane -t :.+
 
 # enable utf-8 on status bar
 set -g status on
-set -g status-utf8 on
+# set -g status-utf8 on
 
 # status bar
 set -g status-right "#[fg=colour155]#(pmset -g batt | ~/.bin/battinfo.rb) | #[fg=colour45]%d %b %R"
