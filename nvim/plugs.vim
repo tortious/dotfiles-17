@@ -12,7 +12,8 @@ Plug 'vim-airline/vim-airline-themes'
 " Search
 Plug 'rking/ag.vim'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'c0r73x/neotags.nvim'
+" Plug 'c0r73x/neotags.nvim'
+Plug 'fntlnz/atags.vim'
 Plug 'scrooloose/nerdtree'
 
 " Editing
@@ -25,10 +26,9 @@ Plug 'tpope/vim-surround'
 " Vim Improvements
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'neomake/neomake'
-" Plug 'shougo/neocomplete.vim'
+Plug 'Shougo/deoplete.nvim' ", { 'do': ':UpdateRemotePlugins' }
 " Plug 'shougo/neosnippet.vim'
 " Plug 'shougo/neosnippet-snippets'
-" Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
