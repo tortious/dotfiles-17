@@ -25,8 +25,9 @@ Plug 'tpope/vim-surround'
 
 " Vim Improvements
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'ervandew/supertab'
 Plug 'neomake/neomake'
-Plug 'Shougo/deoplete.nvim' ", { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'shougo/neosnippet.vim'
 " Plug 'shougo/neosnippet-snippets'
 Plug 'tpope/vim-endwise'
@@ -36,11 +37,15 @@ Plug 'vim-scripts/matchit.zip'
 
 " Languages
 Plug 'derekwyatt/vim-scala'
-Plug 'elixir-lang/vim-elixir'
 Plug 'kchmck/vim-coffee-script'
 Plug 'plasticboy/vim-markdown'
 
+" Elixir
+Plug 'elixir-lang/vim-elixir'
+Plug 'slashmili/alchemist.vim'
+
 " Ruby
+Plug 'fishbullet/deoplete-ruby'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 
