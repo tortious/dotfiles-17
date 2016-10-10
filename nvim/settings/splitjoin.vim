@@ -1,2 +1,2 @@
-nnoremap sj :SplitjoinSplit<cr>
-nnoremap sk :SplitjoinJoin<cr>
+nnoremap sk :SplitjoinSplit<cr>
+nnoremap sj :SplitjoinJoin<cr>

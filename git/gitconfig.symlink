@@ -18,9 +18,12 @@
   path = ~/.gitconfig.local
 [merge]
   ff = only
+	tool = fugitive
 [pull]
   default = current
 [push]
   default = current
 [credential]
 	helper = osxkeychain
+[mergetool "fugitive"]
+	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
