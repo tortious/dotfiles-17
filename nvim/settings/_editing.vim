@@ -116,3 +116,18 @@ else
   " https://github.com/sunaku/home/blob/master/bin/yank
   noremap <silent> <Leader>y y:call system('yank > /dev/tty', @0)<Return>
 endif
+
+" Whitepsace trimming
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
+autocmd BufWritePre *.py,*.js,*.java,*.scala,*.rb,*.ex,*.exs :call <SID>StripTrailingWhitespaces()
