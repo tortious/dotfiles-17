@@ -46,3 +46,16 @@ use_go_default() {
   load_prefix $GOROOT
   export GOPATH=$PWD/code/go
 }
+
+use_node() {
+  local node_root=/opt/node/$1
+  if [ ! -e "$node_root" ]; then
+    echo ""
+    echo "Version not found."
+    echo "Try downloading again and verify existence in:"
+    echo "/opt/node/$1"
+    exit 1
+  fi
+  load_prefix "$node_root"
+  layout_node
+}
