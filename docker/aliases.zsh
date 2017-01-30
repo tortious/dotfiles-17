@@ -13,6 +13,7 @@ alias dcb='docker-compose build'
 alias dck='docker-compose kill'
 alias dcp='docker-compose pull'
 alias dcu='docker-compose up'
+alias edc="$EDITOR docker-compose.yml"
 
 # Docker Machine
 alias dm='docker-machine'
