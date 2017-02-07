@@ -3,3 +3,6 @@
 CUR="$(dirname $0)"
 source "$CUR/functions.zsh"
 source "$CUR/aliases.zsh"
+
+export GOPATH=$HOME/Golang
+export PATH=${PATH}:/usr/local/go/bin:$HOME/Golang/bin
