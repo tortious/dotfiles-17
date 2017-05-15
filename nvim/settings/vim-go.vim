@@ -4,7 +4,7 @@ nnoremap <leader>a :cclose<CR>
 
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
-let g:go_auto_sameids = 1
+let g:go_auto_sameids = 0
 
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
 autocmd FileType go nmap <leader>t  <Plug>(go-test)

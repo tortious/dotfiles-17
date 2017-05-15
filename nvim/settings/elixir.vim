@@ -3,4 +3,4 @@ augroup test_by_filetype
   autocmd FileType elixir map <Leader>t :!mix test<CR>
 augroup END
 
-autocmd Syntax elixir setlocal foldmethod=syntax
+" autocmd Syntax elixir setlocal foldmethod=syntax

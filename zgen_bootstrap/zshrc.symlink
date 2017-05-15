@@ -22,6 +22,7 @@
     # zgen oh-my-zsh plugins/pass
     zgen load bkono/dotfiles java
     zgen load bkono/dotfiles node
+    zgen load bkono/dotfiles yarn
     zgen load bkono/dotfiles ruby
     zgen load bkono/dotfiles tmux
     zgen oh-my-zsh plugins/git
@@ -37,6 +38,7 @@
       zgen oh-my-zsh plugins/brew
       zgen oh-my-zsh plugins/brew-cask
       zgen load bkono/dotfiles brew
+      zgen load bkono/dotfiles macos
       # zgen oh-my-zsh plugins/gem
       zgen oh-my-zsh plugins/osx
     elif [[ "$OSTYPE" == cygwin ]]; then
