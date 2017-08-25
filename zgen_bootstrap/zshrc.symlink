@@ -17,6 +17,7 @@
     zgen load bkono/dotfiles chef
     zgen load bkono/dotfiles direnv
     zgen load bkono/dotfiles go
+    zgen load bkono/dotfiles fzf
     zgen oh-my-zsh plugins/golang
     zgen load bkono/dotfiles gpg
     # zgen oh-my-zsh plugins/pass
@@ -36,7 +37,6 @@
     zgen load zsh-users/zsh-history-substring-search
     if [[ "$OSTYPE" == darwin* ]]; then
       zgen oh-my-zsh plugins/brew
-      zgen oh-my-zsh plugins/brew-cask
       zgen load bkono/dotfiles brew
       zgen load bkono/dotfiles macos
       # zgen oh-my-zsh plugins/gem
@@ -45,11 +45,15 @@
       zgen oh-my-zsh plugins/cygwin
     fi
 
+    # prompt
+    zgen load mafredri/zsh-async
+    zgen load sindresorhus/pure
+
     # completions
     zgen load zsh-users/zsh-completions src
 
     # theme
-    zgen load bkono/dotfiles zsh/kono
+    # zgen load bkono/dotfiles zsh/kono
 
     # save it all
     zgen save
