@@ -14,16 +14,31 @@ jump() {
   cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
 }
 
+jj() {
+  if ! type fzf >/dev/null 2>&1; then
+    echo "fzf not defined"
+    return
+  fi
+
+  if [ "$1" ]; then
+    jump $1
+  else
+    local mark
+    mark="$($MARKPATH | fzf | awk '{print $9}')" && jump "${mark}"
+  fi
+}
+
 #alias j='jump'
 
 mark() {
-  if (( $# == 0 )); then
+  if (($# == 0)); then
     MARK=$(basename "$PWD")
   else
     MARK="$1"
   fi
   if read -q \?"Mark $PWD as ${MARK}? (y/n) "; then
-    mkdir -p "$MARKPATH"; ln -s "$PWD" "$MARKPATH/$MARK"
+    mkdir -p "$MARKPATH"
+    ln -s "$PWD" "$MARKPATH/$MARK"
   fi
 }
 
@@ -40,9 +55,10 @@ marks() {
   done
 }
 
-function _completemarks {
+function _completemarks() {
   reply=($(ls $MARKPATH))
 }
 
 compctl -K _completemarks jump
+compctl -K _completemarks jj
 compctl -K _completemarks unmark

@@ -19,15 +19,6 @@ fdb() {
   cd "$DIR"
 }
 
-vg() {
-  local file
-
-  file="$(ag --nobreak --noheading $@ | fzf -0 -1 | awk -F: '{print $1 " +" $2}')"
-
-  if [[ -n $file ]]; then
-    vim $file
-  fi
-}
 # fe [FUZZY PATTERN] - Open the selected file with the default editor
 #   - Bypass fuzzy finder if there's only one match (--select-1)
 #   - Exit if there's no match (--exit-0)
@@ -43,9 +34,19 @@ v() {
   local file
   file="$(fasd -Rfl "$1" | fzf -1 -0 --no-sort +m)" && vi "${file}" || return 1
 }
+vg() {
+  local file
+
+  file="$(ag --nobreak --noheading $@ | fzf -0 -1 | awk -F: '{print $1 " +" $2}')"
+
+  if [[ -n $file ]]; then
+    vim $file
+  fi
+}
 
 # jump, like z, with fzf if no direct match
 j() {
+  [ $# -gt 0 ] && fasd_cd -d "$*" && return
   local directory
   directory="$(fasd -Rdl "$1" | fzf -1 -0 --no-sort +m)" && cd "${directory}" || return 1
 }
