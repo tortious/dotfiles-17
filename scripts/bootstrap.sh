@@ -8,22 +8,22 @@ DOTFILES_ROOT=$(pwd)
 set -e
 echo ''
 
-info () {
+info() {
   printf " [ \033[00;34m..\033[0m ] $1"
 }
-user () {
+user() {
   printf "\r [ \033[0;33m?\033[0m ] $1 "
 }
-success () {
+success() {
   printf "\r\033[2K [ \033[00;32mOK\033[0m ] $1\n"
 }
-fail () {
+fail() {
   printf "\r\033[2K [\033[0;31mFAIL\033[0m] $1\n"
   echo ''
   exit
 }
 
-link_file () {
+link_file() {
   local src=$1 dst=$2
   local overwrite= backup= skip=
   if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]; then
@@ -31,7 +31,7 @@ link_file () {
 
     if [ "$currentSrc" == "$src" ]; then
       info "$src is already linked. Skipping\n"
-      skip=true;
+      skip=true
     else
       overwrite=${overwrite:-$overwrite_all}
       backup=${backup:-$backup_all}
@@ -60,8 +60,7 @@ install_dotfiles() {
   info "Installing dotfiles\n"
   local backup_all=true
 
-  for src in $(find "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink')
-  do
+  for src in $(find "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink'); do
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
@@ -80,4 +79,3 @@ install_dotfiles
 install_vundles
 echo ''
 echo "All done!"
-

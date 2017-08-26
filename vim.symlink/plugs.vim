@@ -21,6 +21,7 @@ Plug 'godlygeek/tabular'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'z0mbix/vim-shfmt' ", { 'for': 'sh' }
 
 " Vim Improvements
 " Plug 'ajh17/VimCompletesMe'
