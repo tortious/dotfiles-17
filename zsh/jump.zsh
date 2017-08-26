@@ -23,8 +23,8 @@ jj() {
   if [ "$1" ]; then
     jump $1
   else
-    local mark
-    mark="$($MARKPATH | fzf | awk '{print $9}')" && jump "${mark}"
+    local mark="$($MARKPATH | fzf | awk '{print $9}')"
+    jump "${mark}"
   fi
 }
 

@@ -25,6 +25,7 @@ alias ll='ls -al --color=auto'
 alias md='mkdir -p'
 alias remore='!! | more'
 alias retag='ctags -Ra'
+alias sort='gsort'
 alias sz='source ~/.zshrc'
 alias tf='tail -1000f'
 alias tlf="tail -f"

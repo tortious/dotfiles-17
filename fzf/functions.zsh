@@ -19,6 +19,33 @@ fdb() {
   cd "$DIR"
 }
 
+# jump, like z, with fzf if no direct match
+j() {
+  [ $# -gt 0 ] && fasd_cd -d "$*" && return
+  local dir
+  dir=$(fasd -Rdl \
+    | sed "s:$HOME:~:" \
+    | fzf --no-sort +m -q "$*" \
+    | sed "s:~:$HOME:") \
+    && pushd "$dir"
+}
+
+fd() {
+  local dir
+  dir=$(find ${1:-*} -path '*/\.*' \
+    -prune -o -type d \
+    -print 2>/dev/null | fzf +m)
+  [ -d "$dir" ] && pushd "$dir"
+}
+
+ff() {
+  local file
+  local dir
+  file=$(fzf +m -q "$1") \
+    && dir=$(dirname "$file")
+  [ -d "$dir" ] && pushd "$dir"
+}
+
 # fe [FUZZY PATTERN] - Open the selected file with the default editor
 #   - Bypass fuzzy finder if there's only one match (--select-1)
 #   - Exit if there's no match (--exit-0)
@@ -42,11 +69,4 @@ vg() {
   if [[ -n $file ]]; then
     vim $file
   fi
-}
-
-# jump, like z, with fzf if no direct match
-j() {
-  [ $# -gt 0 ] && fasd_cd -d "$*" && return
-  local directory
-  directory="$(fasd -Rdl "$1" | fzf -1 -0 --no-sort +m)" && cd "${directory}" || return 1
 }
