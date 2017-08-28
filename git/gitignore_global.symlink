@@ -36,3 +36,12 @@ Thumbs.db
 ########
 tags
 tags.*
+
+# Git #
+#######
+.git
+
+# Deps #
+########
+**/node_modules
+**/.cocoapods
