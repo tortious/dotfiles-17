@@ -1,4 +1,21 @@
 # files and folders
+
+  # this part is unnecessary with tab mapped to fzf complete. may undo that in the future
+  # local dir=$(ghq list | fzf --select-1 --exit-0)
+  # if [ -n "$dir" ]; then
+  #   cd "$(ghq root)/${dir}"
+  # fi
+
+  gcd() { cd "$(ghq root)/$1" }
+gl() { ghq look $1 }
+
+_fzf_complete_gcd() {
+  _fzf_complete "" "$@" < <(ghq list)
+}
+_fzf_complete_gl() {
+  _fzf_complete "" "$@" < <(ghq list)
+}
+
 fdb() {
   local declare dirs=()
   get_parent_dirs() {

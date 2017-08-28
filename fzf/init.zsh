@@ -2,4 +2,9 @@ CUR="$(dirname $0)"
 source "$CUR/functions.zsh"
 source "$CUR/aliases.zsh"
 
-export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export FZF_DEFAULT_OPTS='--height 40% --reverse --border --select-1'
+export FZF_COMPLETION_TRIGGER=''
+# bindkey '^T' fzf-completion
+# bindkey '^I' $fzf_default_completion

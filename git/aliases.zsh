@@ -1,8 +1,6 @@
-
 alias gaa='git add --all .'
 alias gaad='git ls-files --deleted | xargs git rm'
 alias gbd!='git branch -D'
-alias gcd='git checkout dev'
 alias gcf='git clean -f -d'
 alias gcfn='git clean -f -d -n'
 alias gci='git commit'

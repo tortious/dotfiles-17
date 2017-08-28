@@ -27,3 +27,9 @@
 	helper = osxkeychain
 [mergetool "fugitive"]
 	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+[ghq]
+	root = /Users/bkonowitz/src
+[ghq "https://git.kono.sh"]
+  vcs = git
+[url "https://git.kono.sh/"]
+	insteadOf = ssh://git.kono.sh/
