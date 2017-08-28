@@ -25,7 +25,7 @@
     zgen load bkono/dotfiles yarn
     zgen load bkono/dotfiles ruby
     zgen load bkono/dotfiles tmux
-    zgen oh-my-zsh plugins/git
+    # zgen oh-my-zsh plugins/git
     zgen load bkono/dotfiles git
     zgen load bkono/dotfiles hub
     # zgen oh-my-zsh plugins/node
@@ -36,7 +36,6 @@
     zgen load zsh-users/zsh-history-substring-search
     if [[ "$OSTYPE" == darwin* ]]; then
       zgen oh-my-zsh plugins/brew
-      zgen oh-my-zsh plugins/brew-cask
       zgen load bkono/dotfiles brew
       zgen load bkono/dotfiles macos
       # zgen oh-my-zsh plugins/gem
@@ -45,6 +44,7 @@
       zgen oh-my-zsh plugins/cygwin
     fi
 
+    zgen load bkono/dotfiles fzf
     # completions
     zgen load zsh-users/zsh-completions src
 
