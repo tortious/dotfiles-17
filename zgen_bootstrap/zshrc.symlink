@@ -45,11 +45,10 @@
     fi
 
     zgen load bkono/dotfiles fzf
+    zgen load mafredri/zsh-async
+    zgen load sindresorhus/pure
     # completions
     zgen load zsh-users/zsh-completions src
-
-    # theme
-    zgen load bkono/dotfiles zsh/kono
 
     # save it all
     zgen save
