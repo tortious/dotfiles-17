@@ -32,3 +32,7 @@ alias tlf="tail -f"
 alias trunc='cat /dev/null >'
 alias watch='watch -n 1 '
 alias zgu='zgen update && sz'
+
+if [ -x "$(command -v ccat)" ]; then
+  alias cat=ccat
+fi

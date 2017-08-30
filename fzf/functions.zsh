@@ -87,3 +87,19 @@ vg() {
     vim $file
   fi
 }
+
+### git
+fzf_log() {  
+  hash=$(pretty_git_log |  fzf | awk '{print $1}')
+  echo $hash | pbcopy
+  git showtool $hash
+}
+
+### tmux
+tm() {
+  local session
+  newsession=${1:-new}
+  session=$(tmux list-sessions -F "#{session_name}" | \
+    fzf --query="$1" --select-1 --exit-0) &&
+    tmux attach-session -t "$session" || tmux new-session -s $newsession
+}
