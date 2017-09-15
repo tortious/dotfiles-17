@@ -10,6 +10,7 @@ set viminfo+=!
 set mouse=a mousehide
 set tags=tags;/
 set clipboard=unnamed
+set nofoldenable  " disable folding
 
 " =============== vim-plug Initialization ===============
 if filereadable(expand("~/.config/nvim/plugs.vim"))

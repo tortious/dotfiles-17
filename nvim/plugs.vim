@@ -1,9 +1,10 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " UI
+Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/base16-vim'
-Plug 'flazz/vim-colorschemes'
 Plug 'dandorman/vim-colors'
+Plug 'flazz/vim-colorschemes'
 Plug 'mhartington/oceanic-next'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'

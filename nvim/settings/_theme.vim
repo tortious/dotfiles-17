@@ -1,13 +1,15 @@
 " set background=dark
 " colorscheme molokai "tomorrow-night-bright grb256
 
-if (has("termguicolors"))
-  set termguicolors
-endif
+" this must be turned off when using solarized schemes
+" if (has("termguicolors"))
+"   set termguicolors
+" endif
 
 " Theme
 syntax enable
-colorscheme OceanicNext
+" colorscheme OceanicNext
+colorscheme solarized
 set background=dark
 
 " enable italics, disabled by default
