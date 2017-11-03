@@ -33,3 +33,7 @@
   vcs = git
 [url "https://git.kono.sh/"]
 	insteadOf = ssh://git.kono.sh/
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/
+[gist]
+	token = b4b77033098e6b95efc294cd4a5ba95265baef88
