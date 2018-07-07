@@ -18,7 +18,7 @@ alias gemiv="gem install -v"
 
 # Rails
 alias m="migrate"
-alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
+alias rmigrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias rc='bundle exec rails console'
 alias remigrate='bundle exec rake db:migrate && rake db:migrate:redo && rake db:schema:dump && rake db:test:prepare'
 alias rk="bundle exec rake"

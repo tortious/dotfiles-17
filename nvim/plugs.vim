@@ -13,7 +13,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'rking/ag.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'c0r73x/neotags.nvim'
-Plug 'fntlnz/atags.vim'
+" Plug 'fntlnz/atags.vim'
 Plug 'scrooloose/nerdtree'
 
 " Editing
@@ -28,7 +28,7 @@ Plug 'z0mbix/vim-shfmt', { 'for': ['sh', 'zsh'] }
 " Plug 'shougo/neosnippet-snippets'
 " Plug 'shougo/neosnippet.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ervandew/supertab'
 Plug 'honza/vim-snippets'

@@ -59,3 +59,39 @@ use_node() {
   load_prefix "$node_root"
   layout_node
 }
+
+use_erlang() {
+  if [[ "$OSTYPE" == darwin* ]]; then
+    local erlang_root="/usr/local/Cellar/erlang/$1"
+  else
+    local erlang_root="/usr/local/erlang/$1"
+  fi
+
+  if [ ! -e "$erlang_root" ]; then
+    echo ""
+    echo "Version not found."
+    echo "Make sure that version is available from brew in /usr/local/Cellar/erlang/$1"
+    echo ""
+    exit 1
+  fi
+
+  load_prefix "$erlang_root"
+}
+
+use_elixir() {
+  if [[ "$OSTYPE" == darwin* ]]; then
+    local elixir_root="/usr/local/Cellar/elixir/$1"
+  else
+    local elixir_root="/usr/local/elixir/$1"
+  fi
+
+  if [ ! -e "$elixir_root" ]; then
+    echo ""
+    echo "Version not found."
+    echo "Make sure that version is available from brew in /usr/local/Cellar/elixir/$1"
+    echo ""
+    exit 1
+  fi
+
+  load_prefix "$elixir_root"
+}

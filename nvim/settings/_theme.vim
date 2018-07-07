@@ -9,6 +9,8 @@ endif
 syntax enable
 colorscheme OceanicNext
 set background=dark
+" colorscheme solarized
+" set background=light
 
 " enable italics, disabled by default
 let g:oceanic_next_terminal_italic = 1

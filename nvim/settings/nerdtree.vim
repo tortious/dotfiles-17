@@ -1,3 +1,4 @@
+let NERDTreeShowHidden=1
 autocmd vimenter * NERDTree
 autocmd vimenter * wincmd p
 autocmd StdinReadPre * let s:std_in=1
