@@ -3,13 +3,15 @@ set nocompatible
 " =============== General ===============
 let mapleader=","
 set autoread
+set autowrite
+set autowriteall
 set backspace=indent,eol,start
 set noerrorbells visualbell
 set showcmd showmatch showmode
 set viminfo+=!
 set mouse=a mousehide
 set tags=tags;/
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " =============== vim-plug Initialization ===============
 if filereadable(expand("~/.config/nvim/plugs.vim"))
@@ -27,7 +29,7 @@ let &t_AF="\e[38;5;%dm"
 
 let g:netrw_liststyle=3
 let g:netrw_bufsettings = "noma nomod nu nobl nowrap ro rnu"
-set colorcolumn=+1
+set colorcolumn=81
 set cursorline
 set diffopt+=vertical
 set guicursor=a:blinkon0
@@ -55,6 +57,7 @@ endif
 
 " =============== Indentation ===============
 set autoindent
+set smartindent
 set expandtab
 set shiftround
 set shiftwidth=2

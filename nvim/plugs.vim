@@ -12,8 +12,6 @@ Plug 'vim-airline/vim-airline-themes'
 " Search
 Plug 'rking/ag.vim'
 Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'c0r73x/neotags.nvim'
-" Plug 'fntlnz/atags.vim'
 Plug 'scrooloose/nerdtree'
 
 " Editing
@@ -22,34 +20,26 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'z0mbix/vim-shfmt', { 'for': ['sh', 'zsh'] }
 
 " Vim Improvements
-" Plug 'shougo/neosnippet-snippets'
-" Plug 'shougo/neosnippet.vim'
+Plug 'shougo/neosnippet-snippets'
+Plug 'shougo/neosnippet.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'SirVer/ultisnips'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'ervandew/supertab'
-Plug 'honza/vim-snippets'
-Plug 'neomake/neomake'
+let g:deoplete#enable_at_startup = 1
+Plug 'w0rp/ale'
+" Plug 'neomake/neomake'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/matchit.zip'
 
-" Languages
-Plug 'derekwyatt/vim-scala'
-Plug 'kchmck/vim-coffee-script'
-Plug 'plasticboy/vim-markdown'
+" Shell
+Plug 'dag/vim-fish'
+Plug 'z0mbix/vim-shfmt', { 'for': ['sh', 'zsh'] }
 
 " Go
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
-
-" Elixir
-Plug 'elixir-lang/vim-elixir'
-Plug 'slashmili/alchemist.vim'
 
 " Ruby
 Plug 'fishbullet/deoplete-ruby'
