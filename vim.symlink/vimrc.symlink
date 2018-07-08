@@ -8,21 +8,15 @@ endif
 " =============== General ===============
 let mapleader=","
 set autoread
+set autowrite
+set autowriteall
 set backspace=indent,eol,start
 set noerrorbells visualbell
 set showcmd showmatch showmode
 set viminfo+=!
 set mouse=a mousehide
 set tags=tags;/
-set clipboard=unnamed
-
-" =============== Vundle Initialization ===============
-" This loads all the plugins specified in ~/.vim/vundles.vim
-" Use Vundle plugin to manage all other plugins
-" if filereadable(expand("~/.vim/vundles.vim"))
-"  source ~/.vim/vundles.vim
-" endif
-
+set clipboard=unnamedplus
 
 " =============== vim-plug Initialization ===============
 if filereadable(expand("~/.vim/plugs.vim"))
@@ -30,16 +24,30 @@ if filereadable(expand("~/.vim/plugs.vim"))
 endif
 
 " =============== UI ===============
-set background=dark
-colorscheme molokai "tomorrow-night-bright grb256
+if (has("termguicolors"))
+  set termguicolors
+endif
 
-set t_Co=256 " Force 256 colors
+" Theme
+syntax enable
+colorscheme OceanicNext
+set background=dark
+" colorscheme solarized
+" set background=light
+
+" enable italics, disabled by default
+let g:oceanic_next_terminal_italic = 1
+
+" enable bold, disabled by default
+let g:oceanic_next_terminal_bold = 1
+
+" set t_Co=256 " Force 256 colors
 " in case t_Co alone doesn't work, add this as well:
 " i.e. Force 256 colors harder
 let &t_AB="\e[48;5;%dm"
 let &t_AF="\e[38;5;%dm"
-set term=screen-256color
-let $TERM='screen-256color'
+" set term=screen-256color
+" let $TERM='screen-256color'
 
 let g:netrw_liststyle=3
 let g:netrw_bufsettings = "noma nomod nu nobl nowrap ro rnu"
