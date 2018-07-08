@@ -5,6 +5,12 @@ if filereadable(expand("~/.vimrc.before"))
 	source ~/.vimrc.before
 endif
 
+" Fix issues from https://github.com/vim/vim/issues/3117
+if has('python3')
+  silent! python3 1
+endif
+let g:python3_host_prog='/usr/local/bin/python3'
+
 " =============== General ===============
 let mapleader=","
 set autoread
@@ -90,5 +96,7 @@ filetype plugin indent on
 set ignorecase smartcase
 set incsearch
 let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
+
+set pyxversion=3
 
 so ~/.vim/settings.vim
