@@ -22,7 +22,7 @@ set showcmd showmatch showmode
 set viminfo+=!
 set mouse=a mousehide
 set tags=tags;/
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " =============== vim-plug Initialization ===============
 if filereadable(expand("~/.vim/plugs.vim"))
@@ -69,8 +69,8 @@ set relativenumber
 set numberwidth=5
 set ruler
 set scrolloff=6
-set t_ut= " improve screen clearing by using the background color
-set t_ti=t_te= " prevent vim from killing scrollback buffer
+" set t_ut= " improve screen clearing by using the background color
+" set t_ti=t_te= " prevent vim from killing scrollback buffer
 set textwidth=100
 map <Leader>n :nohl<cr>
 

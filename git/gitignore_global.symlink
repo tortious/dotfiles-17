@@ -19,6 +19,10 @@ Thumbs.db
 .project
 .settings
 .vagrant
+*.sublime-project
+*.sublime-workspace
+.vscode
+.gometalinter-*
 
 # Editor files #
 ################
