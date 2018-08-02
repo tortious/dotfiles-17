@@ -16,8 +16,8 @@
 [core]
   excludesfile = ~/.gitignore_global
 	autocrlf = input
-	editor = nvim
-	pager = cat
+	editor = $EDITOR
+	pager = less
 	ignorecase = false
 	safecrlf = warn
 [fetch]

@@ -12,12 +12,11 @@ if [ ! -e "$HOME/.config/nvim" ]; then
 fi
 
 if [ -x "$(command -v nvim)" ]; then
-  # aliases
   unalias nvim 2>/dev/null
   unset EDITOR
   unalias e 2>/dev/null
 
-  NVBIN="$(which nvim)"
+  NVBIN="$(command -v nvim)"
   alias nvim="direnv exec $NVBIN"
   export EDITOR=nvim
   alias e=$EDITOR
