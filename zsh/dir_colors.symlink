@@ -31,7 +31,8 @@ TERM xterm-256color
 SETGID 34;40 # file that is setgid (g+s)
 CAPABILITY 34;40 # file with capability
 STICKY_OTHER_WRITABLE 34;40 # dir that is sticky and other-writable (+t,o+w)
-OTHER_WRITABLE 34;40 # dir that is other-writable (o+w) and not sticky
+# OTHER_WRITABLE 34;40 # dir that is other-writable (o+w) and not sticky
+OTHER_WRITABLE 34;41 # dir that is other-writable (o+w) and not sticky
 STICKY 37;44 # dir with the sticky bit set (+t) and not other-writable
 
 # Below are the color init strings for the basic file types. A color init

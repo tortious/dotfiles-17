@@ -57,8 +57,9 @@ set splitbelow splitright
  vnoremap > >gv
  vnoremap . :normal .<CR>
 
-command! W w " Bind :W to :w"
-command! Q q " Bind :Q to :q
+command! W w
+command! Q q
+command! Wq wq
 command! Qall qall
 cmap q1 q!
 " " Disable Ex mode
