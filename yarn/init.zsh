@@ -1,7 +1,5 @@
-# Defines ruby aliases, functions, and variable exports for a clean ruby env
+# Defines yarn aliases, functions, and variable exports
 
 CUR="$(dirname $0)"
 source "$CUR/functions.zsh"
 source "$CUR/aliases.zsh"
-
-PATH="$PATH:`yarn global bin`"
