@@ -11,8 +11,8 @@
     # plugins
     zgen load bkono/dotfiles zsh
     zgen load bkono/dotfiles ssh
-    zgen load bkono/dotfiles nvim
     zgen load bkono/dotfiles vim.symlink
+    zgen load bkono/dotfiles nvim
 
     zgen load bkono/dotfiles chef
     zgen load bkono/dotfiles direnv
