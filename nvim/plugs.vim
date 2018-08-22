@@ -1,55 +1,37 @@
 call plug#begin('~/.local/share/nvim/plugged')
-
-" UI
+" Plug 'rking/ag.vim'
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'arcticicestudio/nord-vim'
-" Plug 'chriskempson/base16-vim'
-" Plug 'flazz/vim-colorschemes'
-" Plug 'dandorman/vim-colors'
-Plug 'mhartington/oceanic-next'
-Plug 'ryanoasis/vim-devicons'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
+Plug 'dag/vim-fish'
+Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
+Plug 'fishbullet/deoplete-ruby'
+Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-
-" Search
-Plug 'rking/ag.vim'
-" Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'mhartington/oceanic-next'
+Plug 'pearofducks/ansible-vim'
+Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
-
-" Editing
-Plug 'AndrewRadev/splitjoin.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-
-" Vim Improvements
+Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'shougo/neosnippet-snippets'
 Plug 'shougo/neosnippet.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-let g:deoplete#enable_at_startup = 1
-Plug 'w0rp/ale'
-" Plug 'neomake/neomake'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-repeat'
-Plug 'vim-scripts/matchit.zip'
-
-" Shell
-Plug 'dag/vim-fish'
-Plug 'z0mbix/vim-shfmt', { 'for': ['sh', 'zsh'] }
-
-" Go
-Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
-Plug 'zchee/deoplete-go', { 'do': 'make'}
-
-" Ruby
-Plug 'fishbullet/deoplete-ruby'
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-ruby/vim-ruby'
+Plug 'vim-scripts/matchit.zip'
+Plug 'w0rp/ale'
+Plug 'z0mbix/vim-shfmt', { 'for': ['sh', 'zsh'] }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+let g:deoplete#enable_at_startup = 1
 
 if filereadable(expand("~/.config/nvim/nvimrc.plugs.local"))
   source ~/.config/nvim/nvimrc.plugs.local

@@ -31,9 +31,6 @@
   default = current
 [push]
 	default = current
-[credential]
-	helper = !aws --profile codepipeline codecommit credential-helper $@
-	UseHttpPath = true
 [mergetool "fugitive"]
 	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
 	trustExitCode = false
