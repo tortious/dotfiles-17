@@ -1,17 +1,22 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " UI
-Plug 'chriskempson/base16-vim'
-Plug 'flazz/vim-colorschemes'
-Plug 'dandorman/vim-colors'
+Plug 'altercation/vim-colors-solarized'
+Plug 'arcticicestudio/nord-vim'
+" Plug 'chriskempson/base16-vim'
+" Plug 'flazz/vim-colorschemes'
+" Plug 'dandorman/vim-colors'
 Plug 'mhartington/oceanic-next'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 " Search
 Plug 'rking/ag.vim'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 
 " Editing

@@ -26,6 +26,9 @@ let &t_AB="\e[48;5;%dm"
 let &t_AF="\e[38;5;%dm"
 " set term=screen-256color
 " let $TERM='screen-256color'
+" if (has("termguicolors"))
+"   set termguicolors
+" endif
 
 let g:netrw_liststyle=3
 let g:netrw_bufsettings = "noma nomod nu nobl nowrap ro rnu"
@@ -71,8 +74,8 @@ set incsearch
 let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
 
 
-let g:python_host_prog = '/Users/bkonowitz/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog = '/Users/bkonowitz/.pyenv/versions/neovim3/bin/python'
+" let g:python_host_prog = '/itz/.pyenv/versions/neovim2/bin/python'
+" let g:python3_host_prog = '/Users/bkonowitz/.pyenv/versions/neovim3/bin/python'
 
 so ~/.config/nvim/settings.vim
 

@@ -1,13 +1,13 @@
 " set background=dark
 " colorscheme molokai "tomorrow-night-bright grb256
 
-if (has("termguicolors"))
-  set termguicolors
-endif
+" if (has("termguicolors"))
+"   set termguicolors
+" endif
 
 " Theme
 syntax enable
-colorscheme OceanicNext
+colorscheme solarized
 set background=dark
 " colorscheme solarized
 " set background=light
