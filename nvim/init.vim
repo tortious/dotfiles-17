@@ -73,9 +73,8 @@ set ignorecase smartcase
 set incsearch
 let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
 
-
-" let g:python_host_prog = '/itz/.pyenv/versions/neovim2/bin/python'
-" let g:python3_host_prog = '/Users/bkonowitz/.pyenv/versions/neovim3/bin/python'
+let g:python_host_prog = "/usr/local/pyenv/versions/nvim-py2/bin/python"
+let g:python3_host_prog = "/usr/local/pyenv/versions/nvim/bin/python"
 
 so ~/.config/nvim/settings.vim
 

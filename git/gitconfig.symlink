@@ -9,37 +9,37 @@
   st = status
 [color]
   ui = auto
-	branch = auto
-	diff = auto
-	interactive = auto
-	status = auto
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
 [core]
   excludesfile = ~/.gitignore_global
-	autocrlf = input
-	editor = $EDITOR
-	pager = less
-	ignorecase = false
-	safecrlf = warn
+  autocrlf = input
+  editor = $EDITOR
+  pager = less
+  ignorecase = false
+  safecrlf = warn
 [fetch]
   prune = true
 [include]
   path = ~/.gitconfig.local
 [merge]
   ; ff = only
-	tool = fugitive
+  tool = fugitive
 [pull]
   default = current
 [push]
-	default = current
+  default = current
 [mergetool "fugitive"]
-	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
-	trustExitCode = false
+  cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+  trustExitCode = false
 [ghq]
-	root = /Users/bkonowitz/src
+  root = ~/src
 [ghq "https://git.kono.sh"]
   vcs = git
 [url "https://git.kono.sh/"]
-	insteadOf = ssh://git.kono.sh/
+  insteadOf = ssh://git.kono.sh/
 [url "ssh://bkono@vs-ssh.visualstudio.com/_ssh"]
   insteadOf = "https://bkono.visualstudio.com"
 [url "ssh://bkono@vs-ssh.visualstudio.com/_ssh"]
@@ -47,11 +47,11 @@
 [url "ssh://git-codecommit.us-west-2.amazonaws.com"]
   insteadOf = "https://git-codecommit.us-west-2.amazonaws.com"
 [user]
-	name = Bryan Konowitz
-	email = bryan@kono.sh
+  name = Bryan Konowitz
+  email = bryan@kono.sh
 [g2 "panic"]
-	excludes = -e tags -e tags.* -e .swp -e .swo -e .settings -e .classpath -e *.iml -e *.idea -e .direnv -e .envrc -e .DS_Store
-[diff]
-	tool = p4merge
+  excludes = -e tags -e tags.* -e .swp -e .swo -e .settings -e .classpath -e *.iml -e *.idea -e .direnv -e .envrc -e .DS_Store
 [mergetool]
-	keepBackup = false
+  keepBackup = false
+[hub]
+	protocol = ssh
