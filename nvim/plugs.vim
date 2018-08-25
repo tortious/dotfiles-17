@@ -3,10 +3,12 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Plug 'fishbullet/deoplete-ruby'
 " Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'zchee/deoplete-go', { 'do': 'make'}
+" Plug 'chriskempson/base16-vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'arcticicestudio/nord-vim'
 Plug 'autozimu/LanguageClient-neovim'
+Plug 'chriskempson/base16-vim'
 Plug 'dag/vim-fish'
 Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
 Plug 'jiangmiao/auto-pairs'
