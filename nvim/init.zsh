@@ -17,7 +17,7 @@ if [ -x "$(command -v nvim)" ]; then
   unalias e 2>/dev/null
 
   NVBIN="$(command -v nvim)"
-  alias nvim="direnv exec $NVBIN"
-  export EDITOR=nvim
+  # alias nvim="direnv exec $NVBIN"
+  export EDITOR=$NVBIN
   alias e=$EDITOR
 fi
