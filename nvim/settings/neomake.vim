@@ -11,3 +11,5 @@
 " let g:neomake_serialize_abort_on_error = 1
 
 " let g:neomake_ruby_enabled_makers = ['mri'] " consider jruby, rubocop, and reek
+" call neomake#configure#automake('nw', 1000)
+

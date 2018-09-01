@@ -8,5 +8,9 @@ let g:ale_set_quickfix = 1
 
 " Enable completion where available.
 let g:ale_completion_enabled = 1
-
+let g:ale_lint_on_text_changed = 'normal'
 let g:ale_sign_column_always = 1
+
+let g:ale_linters = {
+\   'dart': ['dartanalyzer', 'dart_language_server'],
+\}

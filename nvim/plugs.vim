@@ -7,9 +7,13 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'arcticicestudio/nord-vim'
-Plug 'autozimu/LanguageClient-neovim'
+Plug 'autozimu/LanguageClient-neovim', {
+      \ 'branch': 'next',
+      \ 'do': 'bash install.sh',
+      \ }
 Plug 'chriskempson/base16-vim'
 Plug 'dag/vim-fish'
+Plug 'dart-lang/dart-vim-plugin'
 Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -23,6 +27,7 @@ Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-abbrfuzzy'
 Plug 'ncm2/ncm2-jedi'
 Plug 'ncm2/ncm2-match-highlight'
+" Plug 'neomake/neomake'
 Plug 'pearofducks/ansible-vim'
 Plug 'roxma/nvim-yarp'
 Plug 'ryanoasis/vim-devicons'
