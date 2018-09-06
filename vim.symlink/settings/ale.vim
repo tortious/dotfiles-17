@@ -8,3 +8,8 @@ nmap <silent> ed :call ale#cursor#ShowCursorDetail()<cr>
 
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
+
+let g:ale_completion_enabled = 1
+let g:ale_linters = {
+\   'dart': ['language_server'],
+\}

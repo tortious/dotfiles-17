@@ -3,6 +3,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'arcticicestudio/nord-vim'
 Plug 'dag/vim-fish'
+Plug 'dart-lang/dart-vim-plugin'
 Plug 'docunext/closetag.vim'
 Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
 Plug 'hashivim/vim-terraform'

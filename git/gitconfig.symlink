@@ -31,14 +31,14 @@
   default = current
 [push]
 	default = current
-[credential]
-	helper = !aws --profile codepipeline codecommit credential-helper $@
-	UseHttpPath = true
+; [credential]
+; 	helper = !aws --profile codepipeline codecommit credential-helper $@
+; 	UseHttpPath = true
 [mergetool "fugitive"]
 	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
 	trustExitCode = false
 [ghq]
-	root = /Users/bkonowitz/src
+	root = ~/src
 [ghq "https://git.kono.sh"]
   vcs = git
 [url "https://git.kono.sh/"]
