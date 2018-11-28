@@ -15,3 +15,21 @@ function gclcc() {
     --config 'credential.UseHttpPath=true' \
     $repository_endpoint
 }
+
+function ave() {
+  local profile=$1
+  shift
+  aws-vault exec $profile -- $@
+}
+
+function avee() {
+  local profile
+  if [ -z "$AWS_VAULT_PROFILE" ]; then
+    profile=$1
+    shift
+  else
+    profile="$AWS_VAULT_PROFILE"
+  fi
+
+  aws-vault exec $profile -- $@
+}

@@ -2,6 +2,7 @@
 ################
 .direnv
 .envrc
+.python-version
 
 # OS generated files #
 ######################
