@@ -69,6 +69,7 @@ set relativenumber
 set numberwidth=5
 set ruler
 set scrolloff=6
+set t_vb= 
 " set t_ut= " improve screen clearing by using the background color
 " set t_ti=t_te= " prevent vim from killing scrollback buffer
 set textwidth=100
