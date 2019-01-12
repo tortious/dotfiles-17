@@ -1,18 +1,15 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " UI
-Plug 'chriskempson/base16-vim'
-Plug 'flazz/vim-colorschemes'
-Plug 'dandorman/vim-colors'
 Plug 'mhartington/oceanic-next'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Search
-Plug 'rking/ag.vim'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf.vim'
+Plug 'ludovicchabant/vim-gutentags'
 
 " Editing
 Plug 'AndrewRadev/splitjoin.vim'
@@ -26,8 +23,7 @@ Plug 'shougo/neosnippet-snippets'
 Plug 'shougo/neosnippet.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_at_startup = 1
-Plug 'w0rp/ale'
-" Plug 'neomake/neomake'
+Plug 'neomake/neomake'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
@@ -45,6 +41,10 @@ Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'fishbullet/deoplete-ruby'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
+
+" Terraform
+Plug 'hashivim/vim-terraform'
+Plug 'juliosueiras/vim-terraform-completion'
 
 if filereadable(expand("~/.config/nvim/nvimrc.plugs.local"))
   source ~/.config/nvim/nvimrc.plugs.local

@@ -70,9 +70,9 @@ set ignorecase smartcase
 set incsearch
 let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
 
-
-let g:python_host_prog = '/Users/bkonowitz/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog = '/Users/bkonowitz/.pyenv/versions/neovim3/bin/python'
+let g:python_host_prog = '/Users/bkonowitz/.asdf/installs/python/2.7.15/bin/python'
+let g:python3_host_prog = '/Users/bkonowitz/.asdf/installs/python/3.7.1/bin/python'
+let g:ruby_host_prog = '/Users/bkonowitz/.asdf/installs/ruby/2.5.3/bin/ruby'
 
 so ~/.config/nvim/settings.vim
 
