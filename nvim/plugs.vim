@@ -19,10 +19,10 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
 " Vim Improvements
-Plug 'shougo/neosnippet-snippets'
-Plug 'shougo/neosnippet.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_at_startup = 1
+Plug 'shougo/neosnippet.vim'
+Plug 'shougo/neosnippet-snippets'
 Plug 'neomake/neomake'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
@@ -43,7 +43,7 @@ Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 
 " Terraform
-Plug 'hashivim/vim-terraform'
+Plug 'hashivim/vim-hashicorp-tools'
 Plug 'juliosueiras/vim-terraform-completion'
 
 if filereadable(expand("~/.config/nvim/nvimrc.plugs.local"))

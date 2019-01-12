@@ -19,6 +19,7 @@ call deoplete#custom#option('omni_patterns', {
 \ 'complete_method': 'omnifunc',
 \ 'terraform': '[^ *\t"{=$]\w*',
 \})
+let g:deoplete#omni_patterns.terraform = '[^ *\t"{=$]\w*'
 let g:deoplete#sources['ruby'] = ['file', 'buffer', 'ruby']
 
 set completeopt=longest,menuone,preview
@@ -36,6 +37,7 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType elixir setlocal omnifunc=elixircomplete#Complete
+autocmd FileType terraform setlocal omnifunc=terraformcomplete#Complete
 
 " Disable deoplete when in multi cursor mode
 function! Multiple_cursors_before()
@@ -48,4 +50,4 @@ endfunction
 
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#auto_complete_start_length = 1
-call deoplete#initialize()
+" call deoplete#initialize()
