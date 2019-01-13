@@ -15,11 +15,11 @@ if !exists('g:deoplete#omni_patterns')
   let g:deoplete#omni_patterns = {}
 endif
 
-call deoplete#custom#option('omni_patterns', {
-\ 'complete_method': 'omnifunc',
-\ 'terraform': '[^ *\t"{=$]\w*',
-\})
-let g:deoplete#omni_patterns.terraform = '[^ *\t"{=$]\w*'
+" call deoplete#custom#option('omni_patterns', {
+" \ 'complete_method': 'omnifunc',
+" \ 'terraform': '[^ *\t"{=$]\w*',
+" \})
+" let g:deoplete#omni_patterns.terraform = '[^ *\t"{=$]\w*'
 let g:deoplete#sources['ruby'] = ['file', 'buffer', 'ruby']
 
 set completeopt=longest,menuone,preview
@@ -50,4 +50,3 @@ endfunction
 
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#auto_complete_start_length = 1
-" call deoplete#initialize()
