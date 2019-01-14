@@ -18,6 +18,27 @@ bind \cq beginning-of-line
 if not set -q __initialized
   set -U __initialized
 
+  # ensure fisher setup and fishfile applied
+  if not functions -q fisher
+      set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+      curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+      fish -c fisher
+  end
+
+  # ensure gitconfig.local
+  if not test -e $HOME/.gitconfig.local
+    printf "No gitconfig.local found. Let's build you one.\n"
+    printf "Name: "
+    read name
+    printf "Email: "
+    read email
+    echo >$HOME/.gitconfig.local "\
+[user]
+  name = $name
+  email = $email"
+    printf "~/.gitconfig.local written.\n"
+  end
+
   # source abbrs
   # set aliases $HOME/.config/fish/functions/*aliases.fish
   # if count $aliases >/dev/null
@@ -103,13 +124,6 @@ end
 setenv SSH_ENV $HOME/.ssh/environment
 if functions __ssh_agent_init >/dev/null
   __ssh_agent_init
-end
-
-# ensure fisher setup and fishfile applied
-if not functions -q fisher
-    set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
-    curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
-    fish -c fisher
 end
 
 # ensure running in tmux

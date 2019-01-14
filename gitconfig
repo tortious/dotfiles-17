@@ -1,0 +1,61 @@
+[init]
+  templatedir = ~/.git_templates
+[alias]
+  aa = add --all
+  ci = commit -v
+  cl = clone
+  co = checkout
+  pr = pull-request
+  st = status
+[color]
+  ui = auto
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[core]
+  excludesfile = ~/.gitignore_global
+  autocrlf = input
+  editor = $EDITOR
+  pager = less
+  ignorecase = false
+  safecrlf = warn
+[diff]
+  tool = vimdiff
+[difftool]
+  prompt = false
+[fetch]
+  prune = true
+[include]
+  path = ~/.gitconfig.local
+[merge]
+  ; ff = only
+  ; tool = fugitive
+  tool = vimdiff
+  conflictstyle = diff3
+[mergetool "vimdiff"]
+  cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+  prompt = false
+  keepBackup = false
+[pull]
+  default = current
+[push]
+  default = current
+; [credential]
+; 	helper = !aws --profile codepipeline codecommit credential-helper $@
+; 	UseHttpPath = true
+[mergetool "fugitive"]
+  cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+  trustExitCode = false
+[ghq]
+  root = ~/src
+[ghq "https://git.kono.sh"]
+  vcs = git
+[url "https://git.kono.sh/"]
+  insteadOf = ssh://git.kono.sh/
+[url "ssh://bkono@vs-ssh.visualstudio.com/_ssh"]
+  insteadOf = "https://bkono.visualstudio.com"
+[url "ssh://bkono@vs-ssh.visualstudio.com/_ssh"]
+  insteadOf = "ssh://bkono.visualstudio.com"
+[url "ssh://git-codecommit.us-west-2.amazonaws.com"]
+  insteadOf = "https://git-codecommit.us-west-2.amazonaws.com"
