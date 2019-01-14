@@ -1,7 +1,7 @@
 set fish_greeting
 
-set --export EDITOR vim
-set --export VISUAL vim
+set --export EDITOR nvim
+set --export VISUAL nvim
 
 # general exports & pathing
 set -x GOPATH $HOME

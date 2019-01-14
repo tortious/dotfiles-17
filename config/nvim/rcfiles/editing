@@ -1,0 +1,39 @@
+" Visual shifting (does not exit Visual mode), allows repeats
+vnoremap < <gv
+vnoremap > >gv
+vnoremap . :normal .<CR>
+
+" Underlining
+nmap <silent> ,u= :t.\|s/./=/g\|:nohls<cr>
+nmap <silent> ,u- :t.\|s/./-/g\|:nohls<cr>
+nmap <silent> ,u~ :t.\|s/./\\~/g\|:nohls<cr>
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
+" (Hopefully) removes the delay when hitting esc in insert mode
+" set noesckeys
+set ttimeout
+set ttimeoutlen=1
+
+" File editing
+function! RenameFile()
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'), 'file')
+  if new_name != '' && new_name != old_name
+    exec ':saveas ' . new_name
+    exec ':silent !rm ' . old_name
+    redraw!
+  endif
+endfunction
+nnoremap <Leader>rn :call RenameFile()<cr>
+
+function! WriteAndCreateDirs()
+    execute ':silent !mkdir -p %:h'
+    write
+endfunction
+command! WW call WriteAndCreateDirs()
+
+autocmd BufWritePre *.py,*.js,*.java,*.scala,*.rb,*.ex,*.exs :call <SID>StripTrailingWhitespaces()
+
+" vim:ft=vim

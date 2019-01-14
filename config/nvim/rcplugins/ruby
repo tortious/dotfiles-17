@@ -1,0 +1,6 @@
+" Ruby
+Plug 'fishbullet/deoplete-ruby'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+
+" vim:ft=vim
