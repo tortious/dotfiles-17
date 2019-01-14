@@ -1,0 +1,4 @@
+" status line setup with git info
+set stl=%f\ %m\ %r%{fugitive#statusline()}\ Line:%l/%L\ Col:%v\ [%Y]
+
+" vim:ft=vim

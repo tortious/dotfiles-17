@@ -1,0 +1,52 @@
+" General Vim Settings
+" --------------------set autoread
+
+set autowrite
+set autowriteall
+set backspace=indent,eol,start
+set noerrorbells visualbell
+set showcmd showmatch showmode
+set viminfo+=!
+set mouse=a mousehide
+set tags=tags;/
+set clipboard=unnamedplus
+
+" =============== Indentation ===============
+set autoindent
+set smartindent
+set expandtab
+set shiftround
+set shiftwidth=2
+set tabstop=2
+set sts=2
+filetype plugin indent on
+
+" =============== Searching ===============
+set hlsearch
+set ignorecase smartcase
+set incsearch
+map <Leader>n :nohl<cr>
+
+set t_ut= " improve screen clearing by using the background color
+set t_ti=t_te= " prevent vim from killing scrollback buffer
+
+" Display extra whitespace
+set list listchars=tab:»·,trail:· " display that extra whitespace
+
+set nojoinspaces
+
+set number
+set numberwidth=5
+set relativenumber
+
+" Always use vertical diffs
+set diffopt+=vertical
+
+command! W w " Bind :W to :w"
+command! Q q " Bind :Q to :q
+command! Qall qall
+cmap q1 q!
+" " Disable Ex mode
+map Q <Nop>
+
+" vim:ft=vim

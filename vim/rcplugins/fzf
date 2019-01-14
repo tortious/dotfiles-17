@@ -1,0 +1,8 @@
+" fzf - the fuzzy finder of all the things
+
+Plug 'junegunn/fzf.vim'
+nnoremap <C-p> :Files<Cr>
+set rtp+=/usr/local/opt/fzf
+
+" vim:ft=vim
+
