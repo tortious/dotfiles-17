@@ -1,9 +1,9 @@
+Plug 'chriskempson/base16-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-"
 " enable italics, disabled by default
 let g:oceanic_next_terminal_italic = 1
 

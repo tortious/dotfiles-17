@@ -1,0 +1,25 @@
+" ALE - Asynchronous linting engine, checks files as you work
+
+Plug 'w0rp/ale'
+
+let g:ale_linters = {
+      \ 'javascript': ['eslint']
+      \ }
+
+" Move between linting errors
+nnoremap ]r :ALENextWrap<CR>
+nnoremap [r :ALEPreviousWrap<CR>
+
+" ALE linting events
+augroup ale
+  autocmd!
+
+  set updatetime=1000
+  let g:ale_lint_on_text_changed = 0
+  autocmd CursorHold * call ale#Queue(0)
+  autocmd CursorHoldI * call ale#Queue(0)
+  autocmd InsertEnter * call ale#Queue(0)
+  autocmd InsertLeave * call ale#Queue(0)
+augroup END
+
+" vim:ft=vim
