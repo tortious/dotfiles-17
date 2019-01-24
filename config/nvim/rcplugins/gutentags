@@ -1,3 +1,6 @@
 Plug 'ludovicchabant/vim-gutentags'
+let g:gutentags_trace = 0
+let g:gutentags_cache_dir = '~/.cache/ctags'
+" let g:gutentags_project_root = ['.git', '.svn', '.root', '.hg', '.project', 'Makefile']
 
 " vim:ft=vim

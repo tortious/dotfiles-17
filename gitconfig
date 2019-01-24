@@ -30,8 +30,8 @@
   path = ~/.gitconfig.local
 [merge]
   ; ff = only
-  ; tool = fugitive
-  tool = vimdiff
+  tool = fugitive
+  ; tool = vimdiff
   conflictstyle = diff3
 [mergetool "vimdiff"]
   cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
@@ -45,7 +45,7 @@
 ; 	helper = !aws --profile codepipeline codecommit credential-helper $@
 ; 	UseHttpPath = true
 [mergetool "fugitive"]
-  cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+  cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
   trustExitCode = false
 [ghq]
   root = ~/src
