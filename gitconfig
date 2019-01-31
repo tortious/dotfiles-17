@@ -57,5 +57,5 @@
   insteadOf = "https://bkono.visualstudio.com"
 [url "ssh://bkono@vs-ssh.visualstudio.com/_ssh"]
   insteadOf = "ssh://bkono.visualstudio.com"
-[url "ssh://git-codecommit.us-west-2.amazonaws.com"]
-  insteadOf = "https://git-codecommit.us-west-2.amazonaws.com"
+[url "https://git-codecommit.us-west-2.amazonaws.com"]
+  insteadOf = "ssh://git-codecommit.us-west-2.amazonaws.com"

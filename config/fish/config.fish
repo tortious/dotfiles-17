@@ -15,6 +15,13 @@ set -gx HOMEBREW_FORCE_VENDOR_RUBY  1
 
 bind \cq beginning-of-line
 
+# set hub or git as appropriate
+if command -sq hub
+  set -x GIT_CMD hub
+else
+  set -x GIT_CMD git
+end
+
 if not set -q __initialized
   set -U __initialized
 
@@ -61,39 +68,39 @@ if not set -q __initialized
   abbr dsp 'docker system prune'
 
   # git
-  abbr g git
-  abbr ga 'git add'
-  abbr gaa 'git add --all .'
-  abbr gba 'git branch -a'
-  abbr gbd! 'git branch -D'
-  abbr gca! 'git commit -v -a --amend'
-  abbr gci 'git commit -v'
-  abbr gcl 'git clone'
-  abbr gcm 'git commit -m'
-  abbr gco 'git checkout'
-  abbr gcob 'git checkout -b'
-  abbr gcot 'git checkout -t'
-  abbr gd 'git diff -M'
-  abbr gddv 'git diff develop'
-  abbr gdl 'git describe --tags --always --dirty'
-  abbr gdm 'git diff master'
-  abbr gf 'git fetch'
-  abbr gl 'git pull'
-  abbr glg 'git log --stat'
-  abbr glgs "git log --graph --pretty=tformat:'%Cred%h%Creset}%Cgreen(%cr)}%C(bold blue)<%an>%Creset}%C(yellow)%d%Creset %s' --abbrev-commit --date=relative | column -s '}' -t | less -FXRS"
-  abbr glgg 'git log --graph --decorate --all --oneline'
-  abbr glr 'git pull --rebase'
-  abbr gm! 'git merge'
-  abbr gp 'git push'
-  abbr gp! 'git push'
-  abbr gpt 'git push --tags'
-  abbr grb 'git rebase'
-  abbr grbi 'git rebase -i'
-  abbr grbm 'git rebase -i master'
-  abbr grhh 'git reset HEAD --hard'
-  abbr gs 'git status -sb'
-  abbr gst 'git status'
-  abbr gwip 'git add --all; git commit -am "WIP"'
+  abbr g $GIT_CMD
+  abbr ga "$GIT_CMD add"
+  abbr gaa "$GIT_CMD add --all ."
+  abbr gba "$GIT_CMD branch -a"
+  abbr gbd! "$GIT_CMD branch -D"
+  abbr gca! "$GIT_CMD commit -v -a --amend"
+  abbr gci "$GIT_CMD commit -v"
+  abbr gcl "$GIT_CMD clone"
+  abbr gcm "$GIT_CMD commit -m"
+  abbr gco "$GIT_CMD checkout"
+  abbr gcob "$GIT_CMD checkout -b"
+  abbr gcot "$GIT_CMD checkout -t"
+  abbr gd "$GIT_CMD diff -M"
+  abbr gddv "$GIT_CMD diff develop"
+  abbr gdl "$GIT_CMD describe --tags --always --dirty"
+  abbr gdm "$GIT_CMD diff master"
+  abbr gf "$GIT_CMD fetch"
+  abbr gl "$GIT_CMD pull"
+  abbr glg "$GIT_CMD log --stat"
+  abbr glgs "$GIT_CMD log --graph --pretty=tformat:'%Cred%h%Creset}%Cgreen(%cr)}%C(bold blue)<%an>%Creset}%C(yellow)%d%Creset %s' --abbrev-commit --date=relative | column -s '}' -t | less -FXRS"
+  abbr glgg "$GIT_CMD log --graph --decorate --all --oneline"
+  abbr glr "$GIT_CMD pull --rebase"
+  abbr gm! "$GIT_CMD merge"
+  abbr gp "$GIT_CMD push"
+  abbr gp! "$GIT_CMD push"
+  abbr gpt "$GIT_CMD push --tags"
+  abbr grb "$GIT_CMD rebase"
+  abbr grbi "$GIT_CMD rebase -i"
+  abbr grbm "$GIT_CMD rebase -i master"
+  abbr grhh "$GIT_CMD reset HEAD --hard"
+  abbr gs "$GIT_CMD status -sb"
+  abbr gst "$GIT_CMD status"
+  abbr gwip "$GIT_CMD add --all; git commit -am 'WIP'"
 
   # terraform
   abbr tf 'terraform'
