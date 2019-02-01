@@ -1,4 +1,4 @@
-Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go' ", { 'tag': '*', 'do': ':GoUpdateBinaries' }
 
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
@@ -11,11 +11,11 @@ let g:go_fmt_command = "goimports"
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_structs = 1
+let g:go_highlight_operators = 0
+let g:go_highlight_structs = 0
 let g:go_info_mode = 'gocode'
 let g:go_list_type = "quickfix"
-let g:go_snippet_engine = "neosnippet"
+let g:go_snippet_engine = "ultisnips"
 let g:go_term_enabled = 1
 
 autocmd FileType go nmap <leader>r  <Plug>(go-run)

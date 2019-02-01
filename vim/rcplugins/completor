@@ -1,0 +1,10 @@
+Plug 'maralla/completor.vim'
+
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+
+let g:completor_complete_options = 'menuone,noselect,preview'
+let g:completor_gocode_binary = '/Users/bkonowitz/bin/gocode'
+
+" vim:ft=vim

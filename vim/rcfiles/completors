@@ -1,42 +1,44 @@
 " buffer
-call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
-    \ 'name': 'buffer',
-    \ 'whitelist': ['*'],
-    \ 'blacklist': ['go'],
-    \ 'completor': function('asyncomplete#sources#buffer#completor')
-    \ }))
-
-" file
-au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
-    \ 'name': 'file',
-    \ 'whitelist': ['*'],
-    \ 'priority': 10,
-    \ 'completor': function('asyncomplete#sources#file#completor')
-    \ }))
-
-" go
-call asyncomplete#register_source(asyncomplete#sources#gocode#get_source_options({
-    \ 'name': 'gocode',
-    \ 'whitelist': ['go'],
-    \ 'completor': function('asyncomplete#sources#gocode#completor')
-    \ }))
-    " \ 'config': {
-    " \    'gocode_path': expand('~/go/bin/gocode')
-    " \  },
-
-" omni
-call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
-      \ 'name': 'omni',
-      \ 'whitelist': ['*'],
-      \ 'blacklist': ['c', 'cpp', 'html'],
-      \ 'completor': function('asyncomplete#sources#omni#completor')
-      \  }))
-
-" ultisnips
-call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
-      \ 'name': 'ultisnips',
-      \ 'whitelist': ['*'],
-      \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
-      \ }))
+" call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
+"     \ 'name': 'buffer',
+"     \ 'whitelist': ['*'],
+"     \ 'blacklist': ['go'],
+"     \ 'completor': function('asyncomplete#sources#buffer#completor')
+"     \ }))
+" 
+" " file
+" au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
+"     \ 'name': 'file',
+"     \ 'whitelist': ['*'],
+"     \ 'priority': 10,
+"     \ 'completor': function('asyncomplete#sources#file#completor')
+"     \ }))
+" 
+" " go
+" " call asyncomplete#register_source(asyncomplete#sources#gocode#get_source_options({
+" "     \ 'name': 'gocode',
+" "     \ 'whitelist': ['go'],
+" "     \ 'completor': function('asyncomplete#sources#gocode#completor')
+" "     \ }))
+" "     " \ 'config': {
+" "     " \    'gocode_path': expand('~/go/bin/gocode')
+" "     " \  },
+" 
+" " omni
+" call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
+"       \ 'name': 'omni',
+"       \ 'whitelist': ['*'],
+"       \ 'blacklist': ['c', 'cpp', 'html'],
+"       \ 'completor': function('asyncomplete#sources#omni#completor')
+"       \  }))
+" 
+" " ultisnips
+" if has('python3')
+"   call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
+"         \ 'name': 'ultisnips',
+"         \ 'whitelist': ['*'],
+"         \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
+"         \ }))
+" endif
 
 " vim:ft=vim
