@@ -5,7 +5,7 @@ map <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 imap <C-s> <esc>:w<CR>
 map <C-s> <esc>:w<CR>
 map <C-t> <esc>:tabnew<CR>
-map <C-x> <C-w>c
+" map <C-x> <C-w>c
 map <Leader>w <C-w>w
 nnoremap <leader><leader> <c-^>
 

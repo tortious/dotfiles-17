@@ -25,6 +25,7 @@ brew "usbmuxd", args: ["HEAD"]
 brew "libimobiledevice", args: ["HEAD"]
 brew "ideviceinstaller"
 brew "ios-deploy"
+brew "macvim"
 brew "neovim"
 brew "opencv"
 brew "opencv@2"

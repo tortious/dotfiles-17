@@ -1,10 +1,72 @@
-Plug 'maralla/completor.vim'
+" Plug 'maralla/completor.vim'
 
+" inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+
+" let g:completor_auto_trigger = 1
+
+" let g:completor_complete_options = 'menuone,noselect,preview'
+" let g:completor_completion_delay = 120
+" let g:completor_gocode_binary = '/Users/bkonowitz/bin/gocode'
+" " let g:completor_terraform_omni_trigger = '[^ *\t"{=$]\w*'
+
+" Plug 'lifepillar/vim-mucomplete'
+" set completeopt+=menuone
+" set completeopt+=noselect
+" set shortmess+=c   " Shut off completion messages
+" set belloff+=ctrlg " If Vim beeps during completion
+" let g:mucomplete#enable_auto_at_startup = 1
+" let g:mucomplete#completion_delay = 0
+
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+set shortmess+=c
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+" inoremap <expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 
-let g:completor_complete_options = 'menuone,noselect,preview'
-let g:completor_gocode_binary = '/Users/bkonowitz/bin/gocode'
+
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" function! s:check_back_space() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
+
+" Use <c-space> for trigger completion.
+inoremap <silent><expr> <C-space> coc#refresh()
+
+" Use `[c` and `]c` for navigate diagnostics
+nmap <silent> [c <Plug>(coc-diagnostic-prev)
+nmap <silent> ]c <Plug>(coc-diagnostic-next)
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K for show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if &filetype == 'vim'
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Close completion window when done
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " vim:ft=vim
