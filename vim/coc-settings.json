@@ -1,3 +1,10 @@
 {
-  "coc.source.omni.filetypes": ["terraform"]
+  "coc.source.omni.filetypes": ["terraform"],
+  "languageserver": {
+    "golang": {
+      "command": "bingo",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    }
+  }
 }
