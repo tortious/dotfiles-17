@@ -5,7 +5,6 @@
 *.png
 *cache*
 *debug*
-*history*
 .DS_Store
 .asdf
 .cargo

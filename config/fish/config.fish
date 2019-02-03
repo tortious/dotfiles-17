@@ -73,6 +73,7 @@ if not set -q __initialized
   abbr gaa "git add --all ."
   abbr gba "git branch -a"
   abbr gbd! "git branch -D"
+  abbr gbsu "git branch --set-upstream-to=origin/(git rev-parse --abbrev-ref HEAD) (git rev-parse --abbrev-ref HEAD)"
   abbr gca! "git commit -v -a --amend"
   abbr gci "git commit -v"
   abbr gcl "$GIT_CMD clone"
