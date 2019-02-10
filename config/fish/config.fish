@@ -68,6 +68,7 @@ if not set -q __initialized
   abbr dsp 'docker system prune'
 
   # git
+  abbr lg "lazygit"
   abbr g $GIT_CMD
   abbr ga "git add"
   abbr gaa "git add --all ."

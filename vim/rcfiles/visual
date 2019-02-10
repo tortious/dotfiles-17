@@ -2,7 +2,7 @@
 "----------------
 " Theme
 syntax enable
-colorscheme OceanicNext
+colorscheme base16-oceanicnext
 set background=dark
 
 if (has("termguicolors"))

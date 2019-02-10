@@ -1,5 +1,4 @@
 {
-  "coc.source.omni.filetypes": ["terraform"],
   "languageserver": {
     "golang": {
       "command": "bingo",
