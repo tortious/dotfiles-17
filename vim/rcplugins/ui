@@ -1,4 +1,4 @@
-Plug 'chriskempson/base16-vim'
+Plug 'danielwe/base16-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
