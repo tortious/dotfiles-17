@@ -58,6 +58,7 @@ if not set -q __initialized
   abbr md 'mkdir -p'
   abbr irb "irb -r 'irb/completion'"
   abbr daa "direnv allow"
+  abbr rg "rg -L"
 
   # aws
   abbr avl 'aws-vault login'
