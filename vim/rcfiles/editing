@@ -34,6 +34,6 @@ function! WriteAndCreateDirs()
 endfunction
 command! WW call WriteAndCreateDirs()
 
-autocmd BufWritePre *.py,*.js,*.java,*.scala,*.rb,*.ex,*.exs :call <SID>StripTrailingWhitespaces()
+" autocmd BufWritePre *.py,*.js,*.java,*.scala,*.rb,*.ex,*.exs :call <SID>StripTrailingWhitespaces()
 
 " vim:ft=vim

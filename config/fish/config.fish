@@ -146,3 +146,7 @@ end
 # setup direnv, asdf, etc
 eval (direnv hook fish)
 source /usr/local/opt/asdf/asdf.fish
+
+if command -sq yarn
+  set -U fish_user_paths (yarn global bin)
+end
