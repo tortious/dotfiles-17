@@ -1,2 +1,2 @@
 #!/bin/sh
-$EDITOR +PlugInstall +PlugClean! +qall
+# $EDITOR +PlugInstall +PlugClean! +qall

@@ -5,13 +5,22 @@ set --export VISUAL vim
 
 # general exports & pathing
 set -x GOPATH $HOME
-set -U fish_user_paths $GOPATH/bin
+set -U fish_user_paths $fish_user_paths $GOPATH/bin
 set -U FZF_COMPLETE                 2
 set -U FZF_TMUX                     1
 set -gx FZF_CTRL_T_COMMAND          $FZF_DEFAULT_COMMAND
 set -gx FZF_DEFAULT_COMMAND         'rg --files --no-ignore-vcs --hidden'
 set -gx FZF_DEFAULT_OPTS            '--height=50% --min-height=15 --reverse'
 set -gx HOMEBREW_FORCE_VENDOR_RUBY  1
+
+# kubeconfig path
+set -x KUBECONFIG $HOME/.kube/config
+set kubeconfigs $HOME/.kube/kubeconfig*
+if count $kubeconfigs >/dev/null
+  for k in $kubeconfigs
+    set KUBECONFIG $KUBECONFIG:$k
+  end
+end
 
 bind \cq beginning-of-line
 
@@ -45,6 +54,8 @@ if not set -q __initialized
   email = $email"
     printf "~/.gitconfig.local written.\n"
   end
+
+
 
   # source abbrs
   # set aliases $HOME/.config/fish/functions/*aliases.fish
@@ -98,6 +109,8 @@ if not set -q __initialized
   abbr gp! "git push"
   abbr gpt "git push --tags"
   abbr grb "git rebase"
+  abbr grba "git rebase --abort"
+  abbr grbc "git rebase --continue"
   abbr grbi "git rebase -i"
   abbr grbm "git rebase -i master"
   abbr grhh "git reset HEAD --hard"
@@ -137,16 +150,19 @@ if functions __ssh_agent_init >/dev/null
 end
 
 # ensure running in tmux
-if status --is-interactive
-  and command -s tmux >/dev/null
-  and not set -q TMUX
-  exec tmux new -A -s (whoami)
-end
+# if status --is-interactive
+#   and command -s tmux >/dev/null
+#   and not set -q TMUX
+#   exec tmux new -A -s (whoami)
+# end
 
 # setup direnv, asdf, etc
 eval (direnv hook fish)
 source /usr/local/opt/asdf/asdf.fish
 
 if command -sq yarn
-  set -U fish_user_paths (yarn global bin)
+  set -U fish_user_paths $fish_user_paths (yarn global bin)
 end
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+

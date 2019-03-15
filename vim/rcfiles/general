@@ -4,7 +4,7 @@
 set autowrite
 set autowriteall
 set backspace=indent,eol,start
-set noerrorbells visualbell
+set noerrorbells novisualbell
 set showcmd showmatch showmode
 set viminfo+=!
 set mouse=a mousehide

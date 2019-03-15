@@ -36,6 +36,6 @@ _site
 fonts
 node_modules
 notes
-public
+# public
 tmp
 vendor
