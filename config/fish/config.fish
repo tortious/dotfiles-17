@@ -127,7 +127,7 @@ if not set -q __initialized
   abbr tns 'tmux new-session -ADd -s'
 
   # config files
-  abbr vv   "pushd ~/.config/nvim; $EDITOR ~/.config/nvim/init.vim; popd"
+  abbr vv   "pushd ~/dotfiles/vim; $EDITOR ~/dotfiles/vim/; popd"
   abbr tt   "$EDITOR ~/.tmux.conf"
   abbr zz   "pushd ~/.config/fish; $EDITOR ~/.config/fish/config.fish; popd"
   abbr zx   "reload -f"

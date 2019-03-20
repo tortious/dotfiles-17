@@ -28,7 +28,8 @@ set incsearch
 map <Leader>n :nohl<cr>
 
 set t_ut= " improve screen clearing by using the background color
-set t_ti=t_te= " prevent vim from killing scrollback buffer
+" set t_ti=t_te= " prevent vim from killing scrollback buffer
+" set t_te= " prevent vim from killing scrollback buffer
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:· " display that extra whitespace
